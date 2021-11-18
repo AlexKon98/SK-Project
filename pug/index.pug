@@ -8,3 +8,153 @@ html(lang="en")
         link(rel="stylesheet", href="../../css/style.css")
         title Document
     body
+        div.header-bg
+            header.header
+                div.container
+                    div.header__flex
+                        div.header__link
+                            img.header__logo(src="../../img/logo-header.svg", alt="") 
+                        nav.header__nav
+                            ul.nav__list 
+                                li.nav__item
+                                    a.nav__link(href="#") Услуги
+                                li.nav__item
+                                    a.nav__link(href="#") Наши работы 
+                                li.nav__item
+                                    a.nav__link(href="#") Калькулятор
+                                li.nav__item
+                                    a.nav__link(href="#") Контакты
+                        div.header__contacts
+                            div.contacts
+                                div.contacts__flex
+                                    img.contacts__tel(src="../../img/phone-green.svg", alt="")
+                                    a.contacts__phone(href="tel:+78003331140") 8 800 333-11-40
+                                div.contacts__flex
+                                    img.mail__img(src="../../img/mail-green.svg", alt="")
+                                    a.contacts__mail(href="mailto:info@intecocert.ru") info@intecocert.ru
+                            button.contacts__btn Заказать звонок
+            div.container(id="cont")
+                div.finishing
+                    div.finishing__content
+                        h2.finishing__heading Отделка заголовок какой-то тут будет
+                        p.finishing__text Какой-то краткий текст Какой-то краткий текст
+                        div.finishing__flex
+                            div.finishing__item
+                                img.finishing__img(src="../../img/speed.svg", alt="")
+                                p.finishing__advantage Какое-то преимущество
+                            div.finishing__item
+                                img.finishing__img(src="../../img/advantage.svg", alt="")
+                                p.finishing__advantage Преимущество
+                    form.finishing__form.form(action="#") 
+                        h3.finishing__form__heading  Оставьте заявку #[br.hide] на #[span бесплатную] консультацию с нашим менеджером
+                        div.form__wrapper
+                            p.form-text Как вас зовут?
+                            input.form__input(id="name", type="text", name="name", placeholder="Александр")
+                        div.form__wrapper
+                            p.form-text Ваш телефон
+                            input.form__input(id="tel", type="tel", name="tel", placeholder="8 (800) 535 35 35")
+                        input.finishing__form__btn(type="submit", value="Отправить заявку")
+        main.main 
+            section.services 
+                div.container 
+                    div.services-container
+                        h2.services__heading Наши услуги
+                        ul.services__list 
+                            li.services__item
+                                div.services__flex 
+                                    p.services__heading-low Косметический ремонт
+                                    ul.services__list-card
+                                        li.list-card__item Демонтаж
+                                        li.list-card__item Черновые работы
+                                        li.list-card__item Чистовые работы
+                                        li.list-card__item Электрика
+                                    img.services__img(src="../../img/dots-blend.svg", alt="")
+                                div.services__flex 
+                                    div.services__flex__item
+                                        div.services__price Цена:
+                                        div.services__price-old 5200 руб/м#[sup 2]
+                                        div.services__price-new 5200 руб/м#[sup 2]
+                                    div.services__flex__item
+                                        div.services__date Срок:
+                                        div.services__days от 5 дней
+                                    button.services__btn.btn Заказать
+                            li.services__item
+                                div.services__flex 
+                                    p.services__heading-low Косметический ремонт
+                                    ul.services__list-card
+                                        li.list-card__item Демонтаж
+                                        li.list-card__item Черновые работы
+                                        li.list-card__item Чистовые работы
+                                        li.list-card__item Электрика
+                                    img.services__img(src="../../img/dots-black.svg", alt="")
+                                div.services__flex 
+                                    div.services__flex__item
+                                        div.services__price Цена:
+                                        div.services__price-old 5200 руб/м#[sup 2]
+                                        div.services__price-new 5200 руб/м#[sup 2]
+                                    div.services__flex__item
+                                        div.services__date Срок:
+                                        div.services__days от 5 дней
+                                    button.services__btn.btn Заказать
+                            li.services__item
+                                div.services__flex 
+                                    p.services__heading-low Косметический ремонт
+                                    ul.services__list-card
+                                        li.list-card__item Демонтаж
+                                        li.list-card__item Черновые работы
+                                        li.list-card__item Чистовые работы
+                                        li.list-card__item Электрика
+                                    img.services__img(src="../../img/dots-black.svg", alt="")
+                                div.services__flex 
+                                    div.services__flex__item
+                                        div.services__price Цена:
+                                        div.services__price-old 5200 руб/м#[sup 2]
+                                        div.services__price-new 5200 руб/м#[sup 2]
+                                    div.services__flex__item
+                                        div.services__date Срок:
+                                        div.services__days от 5 дней
+                                    button.services__btn.btn Заказать
+                            li.services__item
+                                div.services__flex 
+                                    p.services__heading-low Косметический ремонт
+                                    ul.services__list-card
+                                        li.list-card__item Демонтаж
+                                        li.list-card__item Черновые работы
+                                        li.list-card__item Чистовые работы
+                                        li.list-card__item Электрика
+                                    img.services__img(src="../../img/dots-black.svg", alt="")
+                                div.services__flex 
+                                    div.services__flex__item
+                                        div.services__price Цена:
+                                        div.services__price-old 5200 руб/м#[sup 2]
+                                        div.services__price-new 5200 руб/м#[sup 2]
+                                    div.services__flex__item
+                                        div.services__date Срок:
+                                        div.services__days от 5 дней
+                                    button.services__btn.btn Заказать
+            section.why 
+                div.container 
+                    div.why__container
+                        h2.why__heading Почему стоит обратиться именно к нам?
+                        ul.why__list 
+                            li.why__item(id="why-one") 
+                                div.why__wrapper 
+                                    img(src="../../img/partner.svg", alt="")
+                                p.why__text Партнерская скидка 
+                                div.why__content Предлагаем #[span 10% скидку] на все товары магазина ЛеруаМарлен и наших партнеров. 
+                            li.why__item(id="why-two") 
+                                div.why__wrapper 
+                                    img(src="../../img/personal.svg", alt="")
+                                p.why__text Индивидуальный проект
+                                div.why__content Выберете понравившиеся интерьеры и с нашими дизайнером и техническим директором #[span за три часа вы нарисуете дом мечты.]
+                            li.why__item(id="why-three") 
+                                div.why__wrapper 
+                                    img(src="../../img/calculate.svg", alt="")
+                                p.why__text Расчёт по проекту
+                                div.why__content Можно загрузить эскиз для #[span расчета стоимости строительства.] Все необходимые изменения и доработки внесет наш архитектор по Вашим пожеланиям.
+                            li.why__item(id="why-four")
+                                div.why__wrapper 
+                                    img(src="../../img/all-in.svg", alt="")
+                                p.why__text Все включено
+                                div.why__content Доставка и незапланированные расходы #[span включены в стоимость.]
+                                
