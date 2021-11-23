@@ -4,16 +4,17 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="../../css/normalize.css")
-        link(rel="stylesheet", href="../../css/style.css")
-        title Document
+        link(rel="stylesheet", href="normalize.css")
+        link(rel="stylesheet", href="main.css")
+        script(src="js/index.js", defer)
+        title СК Проект
     body
         div.header-bg
             header.header
                 div.container
                     div.header__flex
                         div.header__link
-                            img.header__logo(src="../../img/logo-header.svg", alt="") 
+                            img.header__logo(src="img/logo-header.svg", alt="") 
                         nav.header__nav
                             ul.nav__list 
                                 li.nav__item
@@ -27,10 +28,10 @@ html(lang="en")
                         div.header__contacts
                             div.contacts
                                 div.contacts__flex
-                                    img.contacts__tel(src="../../img/phone-green.svg", alt="")
+                                    img.contacts__tel(src="img/phone-green.svg", alt="")
                                     a.contacts__phone(href="tel:+78003331140") 8 800 333-11-40
                                 div.contacts__flex
-                                    img.mail__img(src="../../img/mail-green.svg", alt="")
+                                    img.mail__img(src="img/mail-green.svg", alt="")
                                     a.contacts__mail(href="mailto:info@intecocert.ru") info@intecocert.ru
                             button.contacts__btn Заказать звонок
             div.container(id="cont")
@@ -40,10 +41,10 @@ html(lang="en")
                         p.finishing__text Какой-то краткий текст Какой-то краткий текст
                         div.finishing__flex
                             div.finishing__item
-                                img.finishing__img(src="../../img/speed.svg", alt="")
+                                img.finishing__img(src="img/speed.svg", alt="")
                                 p.finishing__advantage Какое-то преимущество
                             div.finishing__item
-                                img.finishing__img(src="../../img/advantage.svg", alt="")
+                                img.finishing__img(src="img/advantage.svg", alt="")
                                 p.finishing__advantage Преимущество
                     form.finishing__form.form(action="#") 
                         h3.finishing__form__heading  Оставьте заявку #[br.hide] на #[span бесплатную] консультацию с нашим менеджером
@@ -68,7 +69,7 @@ html(lang="en")
                                         li.list-card__item Черновые работы
                                         li.list-card__item Чистовые работы
                                         li.list-card__item Электрика
-                                    img.services__img(src="../../img/dots-blend.svg", alt="")
+                                    img.services__img(src="img/dots-blend.svg", alt="")
                                 div.services__flex 
                                     div.services__flex__item
                                         div.services__price Цена:
@@ -86,7 +87,7 @@ html(lang="en")
                                         li.list-card__item Черновые работы
                                         li.list-card__item Чистовые работы
                                         li.list-card__item Электрика
-                                    img.services__img(src="../../img/dots-black.svg", alt="")
+                                    img.services__img(src="img/dots-black.svg", alt="")
                                 div.services__flex 
                                     div.services__flex__item
                                         div.services__price Цена:
@@ -104,7 +105,7 @@ html(lang="en")
                                         li.list-card__item Черновые работы
                                         li.list-card__item Чистовые работы
                                         li.list-card__item Электрика
-                                    img.services__img(src="../../img/dots-black.svg", alt="")
+                                    img.services__img(src="img/dots-black.svg", alt="")
                                 div.services__flex 
                                     div.services__flex__item
                                         div.services__price Цена:
@@ -122,7 +123,7 @@ html(lang="en")
                                         li.list-card__item Черновые работы
                                         li.list-card__item Чистовые работы
                                         li.list-card__item Электрика
-                                    img.services__img(src="../../img/dots-black.svg", alt="")
+                                    img.services__img(src="img/dots-black.svg", alt="")
                                 div.services__flex 
                                     div.services__flex__item
                                         div.services__price Цена:
@@ -139,22 +140,22 @@ html(lang="en")
                         ul.why__list 
                             li.why__item(id="why-one") 
                                 div.why__wrapper 
-                                    img(src="../../img/partner.svg", alt="")
+                                    img(src="img/partner.svg", alt="")
                                 p.why__text Партнерская скидка 
                                 div.why__content Предлагаем #[span 10% скидку] на все товары магазина ЛеруаМарлен и наших партнеров. 
                             li.why__item(id="why-two") 
                                 div.why__wrapper 
-                                    img(src="../../img/personal.svg", alt="")
+                                    img(src="img/personal.svg", alt="")
                                 p.why__text Индивидуальный проект
                                 div.why__content Выберете понравившиеся интерьеры и с нашими дизайнером и техническим директором #[span за три часа вы нарисуете дом мечты.]
                             li.why__item(id="why-three") 
                                 div.why__wrapper 
-                                    img(src="../../img/calculate.svg", alt="")
+                                    img(src="img/calculate.svg", alt="")
                                 p.why__text Расчёт по проекту
                                 div.why__content Можно загрузить эскиз для #[span расчета стоимости строительства.] Все необходимые изменения и доработки внесет наш архитектор по Вашим пожеланиям.
                             li.why__item(id="why-four")
                                 div.why__wrapper 
-                                    img(src="../../img/all-in.svg", alt="")
+                                    img(src="img/all-in.svg", alt="")
                                 p.why__text Все включено
                                 div.why__content Доставка и незапланированные расходы #[span включены в стоимость.]
-                                
+            section.objects
