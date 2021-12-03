@@ -21,7 +21,7 @@ const styles = () => {
 };
 
 const pugToHTML = () => {
-    return src('src/*.pug')
+    return src('src/**/*.pug')
         .pipe(
             pug({
                 pretty: true
