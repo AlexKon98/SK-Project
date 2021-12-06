@@ -69,7 +69,7 @@
             <h2 class="services__heading">Наши услуги</h2>
             <ul class="services__list"> 
               <li class="services__item">
-                <div class="services__flex"> 
+                <h3 class="services__flex"> 
                   <p class="services__heading-low">Косметический ремонт</p>
                   <ul class="services__list-card">
                     <li class="list-card__item">Демонтаж</li>
@@ -77,6 +77,44 @@
                     <li class="list-card__item">Чистовые работы</li>
                     <li class="list-card__item">Электрика</li>
                   </ul><img class="services__img" src="img/dots-blend.svg" alt="">
+                </h3>
+                <div class="services__flex-special">
+                  <div class="services__flex__column">
+                    <p class="services__column__heading">Демонтаж</p>
+                    <ul class="services__column__list"> 
+                      <li class="column__item">Демонтаж старых покрытий</li>
+                      <li class="column__item">Демонтаж старой электрики</li>
+                      <li class="column__item">Демонтаж дверей</li>
+                    </ul>
+                  </div>
+                  <div class="services__flex__column">
+                    <p class="services__column__heading">Черновые работы</p>
+                    <ul class="services__column__list">
+                      <li class="column__item">Грунтовка стен и пола</li>
+                      <li class="column__item">Шпатлевка и штукатурка стен</li>
+                      <li class="column__item">Устройство наливных полов</li>
+                    </ul>
+                  </div>
+                  <div class="services__flex__column">
+                    <p class="services__column__heading">Чистовые работы</p>
+                    <ul class="services__column__list"> 
+                      <li class="column__item">Настил линолеума, ковролина</li>
+                      <li class="column__item">Монтаж плинтусов</li>
+                      <li class="column__item">Оклейка стен обоями</li>
+                      <li class="column__item">Устройство откосов из ПВХ-панелей, сендвич-панелей</li>
+                      <li class="column__item">Настил линолеума, ковролина</li>
+                      <li class="column__item">Установка подоконников, отливов</li>
+                      <li class="column__item">Установка межкомнатных дверей</li>
+                    </ul>
+                  </div>
+                  <div class="services__flex__column">
+                    <p class="services__column__heading">Электрика</p>
+                    <ul class="services__column__list"> 
+                      <li class="column__item">Монтаж электроточки</li>
+                      <li class="column__item">Прокладка кабеля</li>
+                      <li class="column__item">Штробление стен под электрокабель</li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="services__flex"> 
                   <div class="services__flex__item">
@@ -318,7 +356,8 @@
                   <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
                     <div class="license__text">Участие в трендах</div>
                   </div>
-                  <p class="license__content" id="one">Вы можете ознакомится подробнее с тендерами нашей компании, перейдя по ссылке</p><a class="license__link" href="#">Посмотреть подробнее</a>
+                  <p class="license__content" id="one">Вы можете ознакомится подробнее с тендерами нашей компании, перейдя по ссылке</p>
+                  <button class="license__link">Посмотреть подробнее</button>
                 </li>
                 <li class="license__item"> 
                   <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
@@ -340,6 +379,93 @@
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="calculator">
+        <div class="container"> 
+          <div class="calculator__wrapper">
+            <h2 class="calculator__heading">Калькулятор</h2>
+            <form class="calculator__block" action="#">
+              <h3 class="calculator__heading-low">Тип ремонта</h3>
+              <div class="calculator__flex">
+                <div class="calculator__input-wrapper">
+                  <input class="calculator__radio" type="radio" id="cap" name="type" checked>
+                  <label class="calculator-example__label" for="cap">Капитальный</label>
+                </div>
+                <div class="calculator__input-wrapper">
+                  <input class="calculator__radio" type="radio" id="cosm" name="type">
+                  <label class="calculator-example__label" for="cosm">Косметический</label>
+                </div>
+                <div class="calculator__input-wrapper">
+                  <input class="calculator__radio" type="radio" id="key" name="type">
+                  <label class="calculator-example__label" for="key">Под ключ</label>
+                </div>
+              </div>
+              <div class="calculator__flex-column">
+                <div class="calculator__text">Площадь, м<sup>2</sup>: </div>
+                <div class="calculator__same-line">
+                  <input class="calculator__value" type="number" value="50" min="1" max="500" id="calcValue">
+                  <div class="calculator__change" id="change">50</div>
+                  <div class="calculator__content">м<sup>2</sup></div>
+                  <input class="calculator__range" type="range" name="range" id="range" min="1" max="500" value="50">
+                </div>
+              </div>
+              <div class="calculator__flex-column">
+                <div class="calculator__text">Выберите дополнительные услуги:</div>
+                <div class="calculator__flex-checkbox">
+                  <div class="calculator__flex-item calculator__flex-item-one">
+                    <div class="calculator__input-wrapper">
+                      <input class="calculator__radio" type="checkbox" id="gkl" name="plus">
+                      <label class="calculator-example__label" for="gkl">Устройство разноуровневого потолка из ГКЛ</label>
+                    </div>
+                    <div class="calculator__input-wrapper">
+                      <input class="calculator__radio" type="checkbox" id="decor" name="plus">
+                      <label class="calculator-example__label" for="decor">Декоративная штукатурка стен</label>
+                    </div>
+                    <div class="calculator__input-wrapper">
+                      <input class="calculator__radio" type="checkbox" id="cond" name="plus">
+                      <label class="calculator-example__label" for="cond">Монтаж кондиционеров</label>
+                    </div>
+                    <div class="calculator__input-wrapper">
+                      <input class="calculator__radio" type="checkbox" id="floor" name="plus">
+                      <label class="calculator-example__label" for="floor">Устройство пола из массива или инженерной доски</label>
+                    </div>
+                  </div>
+                  <div class="calculator__flex-item">
+                    <div class="calculator__input-wrapper">
+                      <input class="calculator__radio" type="checkbox" id="doors" name="plus">
+                      <label class="calculator-example__label" for="doors">Установка межкомнатных дверей</label>
+                    </div>
+                    <div class="calculator__input-wrapper">
+                      <input class="calculator__radio" type="checkbox" id="ceiling" name="plus">
+                      <label class="calculator-example__label" for="ceiling">Штукатурка потолка</label>
+                    </div>
+                    <div class="calculator__input-wrapper">
+                      <input class="calculator__radio" type="checkbox" id="walls" name="plus">
+                      <label class="calculator-example__label" for="walls">Шумоизоляция стен</label>
+                    </div>
+                    <div class="calculator__input-wrapper">
+                      <input class="calculator__radio" type="checkbox" id="pipes" name="plus">
+                      <label class="calculator-example__label" for="pipes">Разводка труб водоснабжения коллекторной системой</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="calculator__flex__item">
+                  <input class="calculator__btn" type="submit" value="Рассчитать">
+                  <div class="calculator__price-text">Примерная стоимость работ:</div>
+                  <div class="calculator__price-line">
+                    <div class="calculator__price">191 250</div>
+                    <div class="calculator__rub-price">рублей</div>
+                  </div>
+                  <div class="calculator__sale-text">Ваша скидка:</div>
+                  <div class="calculator__sale-line">
+                    <div class="calculator__sale">19 250</div>
+                    <div class="calculator__rub">рублей</div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>

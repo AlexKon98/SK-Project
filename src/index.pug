@@ -62,7 +62,7 @@ html(lang="en")
                         h2.services__heading Наши услуги
                         ul.services__list 
                             li.services__item
-                                div.services__flex 
+                                h3.services__flex 
                                     p.services__heading-low Косметический ремонт
                                     ul.services__list-card
                                         li.list-card__item Демонтаж
@@ -70,6 +70,35 @@ html(lang="en")
                                         li.list-card__item Чистовые работы
                                         li.list-card__item Электрика
                                     img.services__img(src="img/dots-blend.svg", alt="")
+                                div.services__flex-special
+                                    div.services__flex__column
+                                        p.services__column__heading Демонтаж
+                                        ul.services__column__list 
+                                            li.column__item Демонтаж старых покрытий
+                                            li.column__item Демонтаж старой электрики
+                                            li.column__item Демонтаж дверей
+                                    div.services__flex__column
+                                        p.services__column__heading Черновые работы
+                                        ul.services__column__list
+                                            li.column__item Грунтовка стен и пола
+                                            li.column__item Шпатлевка и штукатурка стен
+                                            li.column__item Устройство наливных полов
+                                    div.services__flex__column
+                                        p.services__column__heading Чистовые работы
+                                        ul.services__column__list 
+                                            li.column__item Настил линолеума, ковролина
+                                            li.column__item Монтаж плинтусов
+                                            li.column__item Оклейка стен обоями
+                                            li.column__item Устройство откосов из ПВХ-панелей, сендвич-панелей
+                                            li.column__item Настил линолеума, ковролина
+                                            li.column__item Установка подоконников, отливов
+                                            li.column__item Установка межкомнатных дверей
+                                    div.services__flex__column
+                                        p.services__column__heading Электрика
+                                        ul.services__column__list 
+                                            li.column__item Монтаж электроточки
+                                            li.column__item Прокладка кабеля
+                                            li.column__item Штробление стен под электрокабель
                                 div.services__flex 
                                     div.services__flex__item
                                         div.services__price Цена:
@@ -276,7 +305,7 @@ html(lang="en")
                                         img.license__svg(src="img/agreement.svg", alt="")
                                         div.license__text Участие в трендах
                                     p.license__content(id="one") Вы можете ознакомится подробнее с тендерами нашей компании, перейдя по ссылке
-                                    a.license__link(href="#") Посмотреть подробнее
+                                    button.license__link Посмотреть подробнее
                                 li.license__item 
                                     div.license__item__flex 
                                         img.license__svg(src="img/agreement.svg", alt="")
@@ -292,3 +321,65 @@ html(lang="en")
                                         img.license__svg(src="img/agreement.svg", alt="")
                                         div.license__text Фиксированная стоимость
                                     p.license__content(id="four") Стоимость будет отражена в договоре и изменению не подлежит.
+            section.calculator
+                div.container 
+                    div.calculator__wrapper
+                        h2.calculator__heading Калькулятор
+                        form(action="#").calculator__block
+                            h3.calculator__heading-low Тип ремонта
+                            div.calculator__flex
+                                div.calculator__input-wrapper
+                                    input.calculator__radio(type="radio" id="cap" name="type" checked)
+                                    label.calculator-example__label(for="cap") Капитальный
+                                div.calculator__input-wrapper
+                                    input.calculator__radio(type="radio" id="cosm" name="type")
+                                    label.calculator-example__label(for="cosm") Косметический
+                                div.calculator__input-wrapper
+                                    input.calculator__radio(type="radio" id="key" name="type")
+                                    label.calculator-example__label(for="key") Под ключ
+                            div.calculator__flex-column
+                                div.calculator__text Площадь, м#[sup 2]: 
+                                div.calculator__same-line
+                                    input(type="number" value="50" min="1" max="500" id="calcValue").calculator__value
+                                    div.calculator__change(id="change") 50
+                                    div.calculator__content м#[sup 2]
+                                    input.calculator__range(type="range", name="range" id="range" min="1" max="500" value="50")
+                            div.calculator__flex-column
+                                div.calculator__text Выберите дополнительные услуги:
+                                div.calculator__flex-checkbox
+                                    div.calculator__flex-item.calculator__flex-item-one
+                                        div.calculator__input-wrapper
+                                            input.calculator__radio(type="checkbox" id="gkl" name="plus")
+                                            label.calculator-example__label(for="gkl") Устройство разноуровневого потолка из ГКЛ
+                                        div.calculator__input-wrapper
+                                            input.calculator__radio(type="checkbox" id="decor" name="plus")
+                                            label.calculator-example__label(for="decor") Декоративная штукатурка стен
+                                        div.calculator__input-wrapper
+                                            input.calculator__radio(type="checkbox" id="cond" name="plus")
+                                            label.calculator-example__label(for="cond") Монтаж кондиционеров
+                                        div.calculator__input-wrapper
+                                            input.calculator__radio(type="checkbox" id="floor" name="plus")
+                                            label.calculator-example__label(for="floor") Устройство пола из массива или инженерной доски
+                                    div.calculator__flex-item
+                                        div.calculator__input-wrapper
+                                            input.calculator__radio(type="checkbox" id="doors" name="plus")
+                                            label.calculator-example__label(for="doors") Установка межкомнатных дверей
+                                        div.calculator__input-wrapper
+                                            input.calculator__radio(type="checkbox" id="ceiling" name="plus")
+                                            label.calculator-example__label(for="ceiling") Штукатурка потолка
+                                        div.calculator__input-wrapper
+                                            input.calculator__radio(type="checkbox" id="walls" name="plus")
+                                            label.calculator-example__label(for="walls") Шумоизоляция стен
+                                        div.calculator__input-wrapper
+                                            input.calculator__radio(type="checkbox" id="pipes" name="plus")
+                                            label.calculator-example__label(for="pipes") Разводка труб водоснабжения коллекторной системой
+                                div.calculator__flex__item
+                                    input.calculator__btn(type="submit", value="Рассчитать")
+                                    div.calculator__price-text Примерная стоимость работ:
+                                    div.calculator__price-line
+                                        div.calculator__price 191 250
+                                        div.calculator__rub-price рублей
+                                    div.calculator__sale-text Ваша скидка:
+                                    div.calculator__sale-line
+                                        div.calculator__sale 19 250
+                                        div.calculator__rub рублей

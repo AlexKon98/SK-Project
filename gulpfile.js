@@ -28,6 +28,7 @@ const pugToHTML = () => {
             })
         )
         .pipe(dest('dist'))
+        .pipe(browserSync.stream())
 };
 
 const watchFiles = () => {
@@ -39,8 +40,9 @@ const watchFiles = () => {
 }
 
 watch('src/**/*.pug', pugToHTML);
-watch('src/styles/**/*.css', styles);
+watch('src/styles/**/*.scss', styles);
 watch('dist/index.html').on('change', browserSync.reload);
+watch('dist/main.css').on('change', browserSync.reload);
 
 exports.styles = styles;
 exports.pugToHTML = pugToHTML;

@@ -82,6 +82,9 @@ ul {
     &:hover {
         color: #21A636;
     }
+    &:active {
+        color: #fff;
+    }
 }
 
 .contacts {
@@ -108,6 +111,10 @@ ul {
             color: #21A636;
             border-bottom: .5px solid #21A636;
         }
+        &:active {
+            color: #fff;
+            border-bottom: .5px solid #fff;
+        }
     }
     &__phone {
         font-family: 'Montserrat', sans-serif;
@@ -121,6 +128,9 @@ ul {
         transition: color .3s ease-in-out;
         &:hover {
             color: #21A636;
+        }
+        &:active {
+            color: #fff;
         }
     }
     &__tel {
@@ -277,7 +287,21 @@ ul {
     &__item:last-child {
         margin-bottom: 0px;
     }
-    &__flex,
+    &__flex {
+        display: flex;
+        &__column {
+            display: flex;
+            flex-direction: column;
+        }
+        &-special {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #C6C6C6;
+            margin-bottom: 24px;
+        }
+    }
     &__list-card,
     &__flex__item {
         display: flex;
@@ -353,6 +377,34 @@ ul {
         color: #fff;
         @include button;
     }
+    &__column__heading {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+        color: #021705;
+        margin-bottom: 20px;
+    }
+}
+
+.column__item {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(2, 23, 5, 0.75);
+    max-width: 195px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+    &:hover {
+        color: #21A636;
+    }
+    &:active {
+        color: rgba(2, 23, 5, 0.75);
+    }
 }
 
 .list-card__item {
@@ -397,7 +449,7 @@ ul {
         max-width: 70px;
         max-height: 60px;
         padding: 10px;
-        background: linear-gradient(360deg, rgba(170, 204, 255, 0.1) 0%, rgba(15, 109, 251, 0.1) 100%), #F1F5FC.2;
+        background: linear-gradient(360deg, rgba(170, 204, 255, 0.01) 0%, rgba(15, 109, 251, 0.01) 100%), #F1F5FC.2;
         border-radius: 8px;
         img {
             opacity: 1;
@@ -442,7 +494,7 @@ ul {
 }
 
 .objects {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     &__heading {
         max-width: 538px;
         font-family: 'Montserrat', sans-serif;
@@ -454,15 +506,14 @@ ul {
         margin-bottom: 70px;
     }
     &__flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
     }
     &__item {
         max-width: 360px;
         box-shadow: 0px 4px 15px -2px rgba(122, 122, 122, 0.15);
         border-radius: 8px;
-        margin-bottom: 40px;
     }
 }
 
@@ -479,7 +530,7 @@ ul {
         color: #021705;
     }
     &__img {
-        max-width: 360px;
+        max-width: 100%;
     }
     &__info {
         padding: 24px 0;
@@ -494,6 +545,7 @@ ul {
     margin-bottom: 12px;
     padding-left: 25px;
     &__btn {
+        width: 100%;
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: bold;
@@ -526,6 +578,7 @@ ul {
     background-color: #F7FFF8;
     &__wrapper {
         display: flex;
+        align-items: center;
     }
     &__flex {
         width: 661px;
@@ -582,6 +635,8 @@ ul {
         margin-bottom: 6px;
     }
     &__link {
+        border: none;
+        background-color: #fff;
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 600;
@@ -589,5 +644,228 @@ ul {
         line-height: 18px;
         border-bottom: 1px solid #21A636;
         color: #21A636;
+        &:active {
+            opacity: .8;
+        }
+    }
+}
+
+.calculator {
+    padding: 100px 0;
+    &__heading {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 49px;
+        color: #021705;
+        margin-bottom: 70px;
+    }
+    &__block {
+        background-image: url(img/repair-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0px 4px 20px rgba(117, 117, 117, 0.1);
+        border-radius: 4px;
+        padding: 52px 56px 42px 80px;
+        z-index: 5;
+    }
+    &__heading-low {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+    &__flex {
+        position: relative;
+        display: flex;
+        margin-bottom: 40px;
+        &-column {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 37px;
+        }
+    }
+    &__input-wrapper {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+    }
+    &-example__label {
+        cursor: pointer;
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+        padding-left: 30px;
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #FFF;
+        }
+        &::after {
+            position: absolute;
+            content: url(img/agree-radio.svg);
+            left: 4px;
+            bottom: 1px;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+        }
+    }
+    &__radio {
+        display: none;
+        &:checked+.calculator-example__label::after {
+            opacity: 1;
+        }
+    }
+    &__value {
+        max-width: 70px;
+        position: relative;
+        background: none;
+        border: 1px solid #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+        padding: 3px 10px;
+        &:focus-visible {
+            outline: none;
+        }
+        &::after {
+            position: absolute;
+            content: 'м²';
+            color: #FFF;
+        }
+        margin-right: 26px;
+    }
+    &__text {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+    &__same-line {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    &__change,
+    &__content {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #21A636;
+    }
+    &__change {
+        margin-right: 5px;
+    }
+    &__content {
+        margin-right: 12px;
+    }
+    &__range {
+        appearance: none;
+        width: 320px;
+        height: 2px;
+        outline: none;
+        background: #d3d3d3;
+        &::-webkit-slider-thumb {
+            appearance: none;
+            width: 12px;
+            height: 10px;
+            background: #21A636;
+            cursor: pointer;
+        }
+        &::-moz-range-thumb {
+            width: 12px;
+            height: 10px;
+            background: #21A636;
+            cursor: pointer;
+            border-radius: none;
+        }
+    }
+    &__flex-checkbox {
+        display: flex;
+    }
+    &__flex-item {
+        display: flex;
+        flex-direction: column;
+        &-one {
+            margin-right: auto;
+        }
+        .calculator__input-wrapper {
+            margin-bottom: 18px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__btn {
+        margin-right: 50px;
+        @include button;
+        max-width: 200px;
+        padding: 14px 48px;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFF;
+    }
+    &__flex__item {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+    }
+    &__sale-line,
+    &__price-line {
+        display: flex;
+    }
+    &__price-text {
+        max-width: 159px;
+    }
+    &__price-text,
+    &__sale-text {
+        margin-right: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+    &__sale-text {
+        max-width: 70px;
+    }
+    &__price,
+    &__sale,
+    &__rub,
+    &__rub-price {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    &__price,
+    &__sale {
+        margin-right: 7px;
+    }
+    &__rub-price {
+        margin-right: 50px;
     }
 }
