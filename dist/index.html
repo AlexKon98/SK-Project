@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/index.js" defer></script>
     <title>СК Проект</title>
   </head>
@@ -467,6 +470,72 @@
               </div>
             </form>
           </div>
+        </div>
+      </section>
+      <section class="slider">
+        <div class="container"> 
+          <div class="slider__content">
+            <h2 class="slider__heading">Пример дизайн-проекта</h2>
+            <div class="slider__flex">
+              <div class="slider__item">
+                <div class="slider__column">
+                  <div class="slider__text">Выберите тип проекта, чтобы посмотреть примеры</div>
+                  <div class="slider__radio-flex">
+                    <div class="slider__input-wrapper">
+                      <input class="slider__radio" type="radio" id="plan" name="plus" checked>
+                      <label class="slider__label" for="plan">"Планировочный"</label>
+                    </div>
+                    <div class="slider__input-wrapper">
+                      <input class="slider__radio" type="radio" id="standart" name="plus">
+                      <label class="slider__label" for="standart">"Стандарт"</label>
+                    </div>
+                    <div class="slider__input-wrapper">
+                      <input class="slider__radio" type="radio" id="max" name="plus">
+                      <label class="slider__label" for="max">"Максимальный"</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="slider__btn">Скачать пример дизайн-проекта “Максимальный”</button>
+            </div>
+          </div>
+          <div class="slider__block"><img class="slider__img" src="img/test-img.png" alt="">
+            <div class="swiper slider__swiper">
+              <div class="swiper-wrapper slider__wrapper">
+                <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
+                <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
+                <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
+                <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map"> 
+        <div class="container">
+          <h2 class="map__heading">Текущие объекты на карте</h2>
+          <div class="map__block" id="map"></div>
+        </div>
+      </section>
+      <section class="order">
+        <div class="container">
+          <h2 class="order__heading">Заявка на консультацию</h2>
+          <p class="order__text">Заполните форму, наш менеджер свяжется с вами и ответит на любые вопросы</p>
+          <form class="order__form">
+            <div class="order__flex">
+              <div class="order__wrapper">
+                <label class="order__label" for="name">Ваше имя</label>
+                <input class="order__input" type="text" name="name" id="name" placeholder="Антон">
+              </div>
+              <div class="order__wrapper">
+                <label class="order__label" for="tel">Телефон</label>
+                <input class="order__input" type="tel" name="name" id="tel" placeholder="+7 (800) 535 35 35">
+              </div>
+              <input class="order__btn" type="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+            </div>
+          </form>
         </div>
       </section>
     </main>

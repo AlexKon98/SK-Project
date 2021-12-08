@@ -5,7 +5,10 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="normalize.css")
+        link(rel="stylesheet", href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
         link(rel="stylesheet", href="main.css")
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+        script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
         script(src="js/index.js", defer)
         title СК Проект
     body
@@ -383,3 +386,55 @@ html(lang="en")
                                     div.calculator__sale-line
                                         div.calculator__sale 19 250
                                         div.calculator__rub рублей
+            section.slider
+                div.container 
+                    div.slider__content
+                        h2.slider__heading Пример дизайн-проекта
+                        div.slider__flex
+                            div.slider__item
+                                div.slider__column
+                                    div.slider__text Выберите тип проекта, чтобы посмотреть примеры
+                                    div.slider__radio-flex
+                                        div.slider__input-wrapper
+                                            input.slider__radio(type="radio" id="plan" name="plus" checked)
+                                            label.slider__label(for="plan") "Планировочный"
+                                        div.slider__input-wrapper
+                                            input.slider__radio(type="radio" id="standart" name="plus")
+                                            label.slider__label(for="standart") "Стандарт"
+                                        div.slider__input-wrapper
+                                            input.slider__radio(type="radio" id="max" name="plus")
+                                            label.slider__label(for="max") "Максимальный"
+                            button.slider__btn Скачать пример дизайн-проекта “Максимальный”
+                    div.slider__block
+                        img.slider__img(src="img/test-img.png", alt="")
+                        div.swiper.slider__swiper
+                            div.swiper-wrapper.slider__wrapper
+                                div.swiper-slide.slider__slide
+                                    img.slider__image(src="img/test-img.png", alt="")
+                                div.swiper-slide.slider__slide
+                                    img.slider__image(src="img/test-img.png", alt="")
+                                div.swiper-slide.slider__slide
+                                    img.slider__image(src="img/test-img.png", alt="")
+                                div.swiper-slide.slider__slide
+                                    img.slider__image(src="img/test-img.png", alt="")
+                            div.swiper-button-prev
+                            div.swiper-button-next
+            section.map 
+                div.container
+                    h2.map__heading Текущие объекты на карте
+                    div.map__block(id="map")
+            section.order
+                div.container
+                    h2.order__heading Заявка на консультацию
+                    p.order__text Заполните форму, наш менеджер свяжется с вами и ответит на любые вопросы
+                    form.order__form
+                        div.order__flex
+                            div.order__wrapper
+                                label.order__label(for="name") Ваше имя
+                                input.order__input(type="text", name="name" id="name" placeholder="Антон")
+                            div.order__wrapper
+                                label.order__label(for="tel") Телефон
+                                input.order__input(type="tel", name="name" id="tel" placeholder="+7 (800) 535 35 35")
+                            input.order__btn(type="submit" value="ОСТАВИТЬ ЗАЯВКУ")
+
+

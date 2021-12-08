@@ -18,3 +18,24 @@
         box-shadow: 0px 24px 24px -12px rgba(33, 166, 54, 0.25), inset 0px 4px 16px rgba(255, 255, 255, 0.25);
     }
 }
+
+@mixin slider-btn {
+    max-width: 370px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(92.92deg, #7AEB8C 0%, #21A636 0.01%, #066716 100%);
+    border-image-slice: 1;
+    border-radius: 2px;
+    padding: 12px 41px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #041306;
+    background: #fff;
+    &:hover {
+        background: linear-gradient(92.92deg, #7AEB8C 0%, #21A636 0.01%, #066716 100%);
+        color: #fff;
+    }
+}
