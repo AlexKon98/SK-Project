@@ -10,534 +10,887 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&amp;lang=ru_RU" type="text/javascript"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <title>СК Проект</title>
   </head>
-  <body>
-    <div class="header-bg">
-      <header class="header">
-        <div class="container">
-          <div class="header__flex">
-            <div class="header__link"><img class="header__logo" src="img/logo-header.svg" alt=""></div>
-            <nav class="header__nav">
-              <ul class="nav__list"> 
-                <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Наши работы </a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Калькулятор</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
-              </ul>
-            </nav>
-            <div class="header__contacts">
-              <div class="contacts">
-                <div class="contacts__flex"><img class="contacts__tel" src="img/phone-green.svg" alt=""><a class="contacts__phone" href="tel:+78003331140">8 800 333-11-40</a></div>
-                <div class="contacts__flex"><img class="mail__img" src="img/mail-green.svg" alt=""><a class="contacts__mail" href="mailto:info@intecocert.ru">info@intecocert.ru</a></div>
-              </div>
-              <button class="contacts__btn">Заказать звонок</button>
-            </div>
+  <body></body>
+  <div class="popup" id="popup">
+    <div class="popup__form" id="popup__form">
+      <button class="popup__btn" id="popup__btn">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M31.25 8.75L8.75 31.25" stroke="#021705" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M31.25 31.25L8.75 8.75" stroke="#021705" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="popup__heading">Капитальный ремонт квартиры</h2>
+      <ul class="popup__list">
+        <li class="popup__item"> <img class="popup__img" src="img/fix.svg" alt="">
+          <div class="popup__text">Капитальный ремонт</div>
+        </li>
+        <li class="popup__item"> <img class="popup__img" src="img/price.svg" alt="">
+          <div class="popup__text">ЖК Пятницкие кварталы</div>
+        </li>
+        <li class="popup__item"> <img class="popup__img" src="img/geo.svg" alt="">
+          <div class="popup__text">Стоимость 694 200 руб.</div>
+        </li>
+        <li class="popup__item"> <img class="popup__img" src="img/square.svg" alt="">
+          <div class="popup__text">Площадь 64 м²</div>
+        </li>
+      </ul>
+      <div class="popup__slider"><img class="popup__slider-img" src="img/test-img.png" alt="">
+        <div class="swiper popup__slider-block">
+          <div class="swiper-wrapper popup__wrapper">
+            <div class="swiper-slide popup__slide"><img class="popup__slider-image popup__active" src="img/test-img.png" alt=""></div>
+            <div class="swiper-slide popup__slide"><img class="popup__slider-image" src="img/test-img.png" alt=""></div>
+            <div class="swiper-slide popup__slide"><img class="popup__slider-image" src="img/test-img.png" alt=""></div>
+            <div class="swiper-slide popup__slide"><img class="popup__slider-image" src="img/test-img.png" alt=""></div>
           </div>
-        </div>
-      </header>
-      <div class="container" id="cont">
-        <div class="finishing">
-          <div class="finishing__content">
-            <h2 class="finishing__heading">Отделка заголовок какой-то тут будет</h2>
-            <p class="finishing__text">Какой-то краткий текст Какой-то краткий текст</p>
-            <div class="finishing__flex">
-              <div class="finishing__item"><img class="finishing__img" src="img/speed.svg" alt="">
-                <p class="finishing__advantage">Какое-то преимущество</p>
-              </div>
-              <div class="finishing__item"><img class="finishing__img" src="img/advantage.svg" alt="">
-                <p class="finishing__advantage">Преимущество</p>
-              </div>
-            </div>
-          </div>
-          <form class="finishing__form form" action="#"> 
-            <h3 class="finishing__form__heading"> Оставьте заявку <br class="hide"> на <span>бесплатную</span> консультацию с нашим менеджером</h3>
-            <div class="form__wrapper">
-              <p class="form-text">Как вас зовут?</p>
-              <input class="form__input" id="name" type="text" name="name" placeholder="Александр">
-            </div>
-            <div class="form__wrapper">
-              <p class="form-text">Ваш телефон</p>
-              <input class="form__input" id="tel" type="tel" name="tel" placeholder="8 (800) 535 35 35">
-            </div>
-            <input class="finishing__form__btn" type="submit" value="Отправить заявку">
-          </form>
+          <div class="slider-button-prev"></div>
+          <div class="slider-button-next"></div>
         </div>
       </div>
+      <div class="popup__content">
+        <h4 class="popup__heading-low">Список проведённых работ</h4>
+        <ul class="popup__list-low">
+          <ul class="popup__lists"> 
+            <li class="popup__item-low">Штукатурка стен</li>
+            <li class="popup__item-low">Стяжка пола</li>
+            <li class="popup__item-low">Монтах ХВС, ГВС, канализации</li>
+          </ul>
+          <ul class="popup__lists"> 
+            <li class="popup__item-low">Монтаж электропроводки</li>
+            <li class="popup__item-low">Укладка плитки</li>
+            <li class="popup__item-low">Монтаж сантехоборудования</li>
+          </ul>
+          <ul class="popup__lists">
+            <li class="popup__item-low">Монтаж вентиляции</li>
+            <li class="popup__item-low">Монтаж ГКЛ потолка</li>
+            <li class="popup__item-low">Монтаж системы кондиционирования</li>
+          </ul>
+        </ul>
+      </div>
     </div>
-    <main class="main"> 
-      <section class="services"> 
-        <div class="container"> 
-          <div class="services-container">
-            <h2 class="services__heading">Наши услуги</h2>
-            <ul class="services__list"> 
-              <li class="services__item">
-                <h3 class="services__flex"> 
-                  <p class="services__heading-low">Косметический ремонт</p>
-                  <ul class="services__list-card">
-                    <li class="list-card__item">Демонтаж</li>
-                    <li class="list-card__item">Черновые работы</li>
-                    <li class="list-card__item">Чистовые работы</li>
-                    <li class="list-card__item">Электрика</li>
-                  </ul><img class="services__img" src="img/dots-blend.svg" alt="">
-                </h3>
-                <div class="services__flex-special">
-                  <div class="services__flex__column">
-                    <p class="services__column__heading">Демонтаж</p>
-                    <ul class="services__column__list"> 
-                      <li class="column__item">Демонтаж старых покрытий</li>
-                      <li class="column__item">Демонтаж старой электрики</li>
-                      <li class="column__item">Демонтаж дверей</li>
-                    </ul>
-                  </div>
-                  <div class="services__flex__column">
-                    <p class="services__column__heading">Черновые работы</p>
-                    <ul class="services__column__list">
-                      <li class="column__item">Грунтовка стен и пола</li>
-                      <li class="column__item">Шпатлевка и штукатурка стен</li>
-                      <li class="column__item">Устройство наливных полов</li>
-                    </ul>
-                  </div>
-                  <div class="services__flex__column">
-                    <p class="services__column__heading">Чистовые работы</p>
-                    <ul class="services__column__list"> 
-                      <li class="column__item">Настил линолеума, ковролина</li>
-                      <li class="column__item">Монтаж плинтусов</li>
-                      <li class="column__item">Оклейка стен обоями</li>
-                      <li class="column__item">Устройство откосов из ПВХ-панелей, сендвич-панелей</li>
-                      <li class="column__item">Настил линолеума, ковролина</li>
-                      <li class="column__item">Установка подоконников, отливов</li>
-                      <li class="column__item">Установка межкомнатных дверей</li>
-                    </ul>
-                  </div>
-                  <div class="services__flex__column">
-                    <p class="services__column__heading">Электрика</p>
-                    <ul class="services__column__list"> 
-                      <li class="column__item">Монтаж электроточки</li>
-                      <li class="column__item">Прокладка кабеля</li>
-                      <li class="column__item">Штробление стен под электрокабель</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="services__flex"> 
-                  <div class="services__flex__item">
-                    <div class="services__price">Цена:</div>
-                    <div class="services__price-old">5200 руб/м<sup>2</sup></div>
-                    <div class="services__price-new">5200 руб/м<sup>2</sup></div>
-                  </div>
-                  <div class="services__flex__item">
-                    <div class="services__date">Срок:</div>
-                    <div class="services__days">от 5 дней</div>
-                  </div>
-                  <button class="services__btn btn">Заказать</button>
-                </div>
-              </li>
-              <li class="services__item">
-                <div class="services__flex"> 
-                  <p class="services__heading-low">Косметический ремонт</p>
-                  <ul class="services__list-card">
-                    <li class="list-card__item">Демонтаж</li>
-                    <li class="list-card__item">Черновые работы</li>
-                    <li class="list-card__item">Чистовые работы</li>
-                    <li class="list-card__item">Электрика</li>
-                  </ul><img class="services__img" src="img/dots-black.svg" alt="">
-                </div>
-                <div class="services__flex"> 
-                  <div class="services__flex__item">
-                    <div class="services__price">Цена:</div>
-                    <div class="services__price-old">5200 руб/м<sup>2</sup></div>
-                    <div class="services__price-new">5200 руб/м<sup>2</sup></div>
-                  </div>
-                  <div class="services__flex__item">
-                    <div class="services__date">Срок:</div>
-                    <div class="services__days">от 5 дней</div>
-                  </div>
-                  <button class="services__btn btn">Заказать</button>
-                </div>
-              </li>
-              <li class="services__item">
-                <div class="services__flex"> 
-                  <p class="services__heading-low">Косметический ремонт</p>
-                  <ul class="services__list-card">
-                    <li class="list-card__item">Демонтаж</li>
-                    <li class="list-card__item">Черновые работы</li>
-                    <li class="list-card__item">Чистовые работы</li>
-                    <li class="list-card__item">Электрика</li>
-                  </ul><img class="services__img" src="img/dots-black.svg" alt="">
-                </div>
-                <div class="services__flex"> 
-                  <div class="services__flex__item">
-                    <div class="services__price">Цена:</div>
-                    <div class="services__price-old">5200 руб/м<sup>2</sup></div>
-                    <div class="services__price-new">5200 руб/м<sup>2</sup></div>
-                  </div>
-                  <div class="services__flex__item">
-                    <div class="services__date">Срок:</div>
-                    <div class="services__days">от 5 дней</div>
-                  </div>
-                  <button class="services__btn btn">Заказать</button>
-                </div>
-              </li>
-              <li class="services__item">
-                <div class="services__flex"> 
-                  <p class="services__heading-low">Косметический ремонт</p>
-                  <ul class="services__list-card">
-                    <li class="list-card__item">Демонтаж</li>
-                    <li class="list-card__item">Черновые работы</li>
-                    <li class="list-card__item">Чистовые работы</li>
-                    <li class="list-card__item">Электрика</li>
-                  </ul><img class="services__img" src="img/dots-black.svg" alt="">
-                </div>
-                <div class="services__flex"> 
-                  <div class="services__flex__item">
-                    <div class="services__price">Цена:</div>
-                    <div class="services__price-old">5200 руб/м<sup>2</sup></div>
-                    <div class="services__price-new">5200 руб/м<sup>2</sup></div>
-                  </div>
-                  <div class="services__flex__item">
-                    <div class="services__date">Срок:</div>
-                    <div class="services__days">от 5 дней</div>
-                  </div>
-                  <button class="services__btn btn">Заказать</button>
-                </div>
-              </li>
+  </div>
+  <div class="header-bg">
+    <header class="header">
+      <div class="container">
+        <div class="header__flex">
+          <div class="header__link"><img class="header__logo" src="img/logo-header.svg" alt=""></div>
+          <nav class="header__nav">
+            <ul class="nav__list"> 
+              <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Наши работы </a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Калькулятор</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
             </ul>
+          </nav>
+          <div class="header__contacts">
+            <div class="contacts">
+              <div class="contacts__flex"><img class="contacts__tel" src="img/phone-green.svg" alt=""><a class="contacts__phone" href="tel:+78003331140">8 800 333-11-40</a></div>
+              <div class="contacts__flex"><img class="mail__img" src="img/mail-green.svg" alt=""><a class="contacts__mail" href="mailto:info@intecocert.ru">info@intecocert.ru</a></div>
+            </div>
+            <button class="contacts__btn">Заказать звонок</button>
           </div>
         </div>
-      </section>
-      <section class="why"> 
-        <div class="container"> 
-          <div class="why__container">
-            <h2 class="why__heading">Почему стоит обратиться именно к нам?</h2>
-            <ul class="why__list"> 
-              <li class="why__item" id="why-one"> 
-                <div class="why__wrapper"> <img src="img/partner.svg" alt=""></div>
-                <p class="why__text">Партнерская скидка </p>
-                <div class="why__content">Предлагаем <span>10% скидку</span> на все товары магазина ЛеруаМарлен и наших партнеров. </div>
-              </li>
-              <li class="why__item" id="why-two"> 
-                <div class="why__wrapper"> <img src="img/personal.svg" alt=""></div>
-                <p class="why__text">Индивидуальный проект</p>
-                <div class="why__content">Выберете понравившиеся интерьеры и с нашими дизайнером и техническим директором <span>за три часа вы нарисуете дом мечты.</span></div>
-              </li>
-              <li class="why__item" id="why-three"> 
-                <div class="why__wrapper"> <img src="img/calculate.svg" alt=""></div>
-                <p class="why__text">Расчёт по проекту</p>
-                <div class="why__content">Можно загрузить эскиз для <span>расчета стоимости строительства.</span> Все необходимые изменения и доработки внесет наш архитектор по Вашим пожеланиям.</div>
-              </li>
-              <li class="why__item" id="why-four">
-                <div class="why__wrapper"> <img src="img/all-in.svg" alt=""></div>
-                <p class="why__text">Все включено</p>
-                <div class="why__content">Доставка и незапланированные расходы <span>включены в стоимость.</span></div>
-              </li>
-            </ul>
+      </div>
+    </header>
+    <div class="container" id="cont">
+      <div class="finishing">
+        <div class="finishing__content">
+          <h2 class="finishing__heading">Отделка заголовок какой-то тут будет</h2>
+          <p class="finishing__text">Какой-то краткий текст Какой-то краткий текст</p>
+          <div class="finishing__flex">
+            <div class="finishing__item"><img class="finishing__img" src="img/speed.svg" alt="">
+              <p class="finishing__advantage">Какое-то преимущество</p>
+            </div>
+            <div class="finishing__item"><img class="finishing__img" src="img/advantage.svg" alt="">
+              <p class="finishing__advantage">Преимущество</p>
+            </div>
           </div>
         </div>
-      </section>
-      <section class="objects">
-        <div class="container">
-          <h2 class="objects__heading">Объекты, которые мы уже выполнили</h2>
-          <ul class="objects__flex">
-            <li class="objects__item">
-              <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
-              <div class="item__info">
-                <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
-                  <p class="info__text">Капитальный ремонт</p>
+        <form class="finishing__form form" action="#"> 
+          <h3 class="finishing__form__heading"> Оставьте заявку <br class="hide"> на <span>бесплатную</span> консультацию с нашим менеджером</h3>
+          <div class="form__wrapper">
+            <p class="form-text">Как вас зовут?</p>
+            <input class="form__input" id="name" type="text" name="name" placeholder="Александр">
+          </div>
+          <div class="form__wrapper">
+            <p class="form-text">Ваш телефон</p>
+            <input class="form__input" id="tel" type="tel" name="tel" placeholder="8 (800) 535 35 35">
+          </div>
+          <input class="finishing__form__btn" type="submit" value="Отправить заявку">
+        </form>
+      </div>
+    </div>
+  </div>
+  <main class="main"> 
+    <section class="services"> 
+      <div class="container"> 
+        <div class="services-container">
+          <h2 class="services__heading">Наши услуги</h2>
+          <ul class="services__list" id="accordion">
+            <li class="services__item">
+              <h3 class="services__flex"> 
+                <p class="services__heading-low">Косметический ремонт</p>
+                <ul class="services__list-card">
+                  <li class="list-card__item">Демонтаж</li>
+                  <li class="list-card__item">Черновые работы</li>
+                  <li class="list-card__item">Чистовые работы</li>
+                  <li class="list-card__item">Электрика</li>
+                </ul><img class="services__img" src="img/dots-blend.svg" alt="">
+              </h3>
+              <div class="services__flex-special">
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Демонтаж</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Демонтаж старых покрытий</li>
+                    <li class="column__item">Демонтаж старой электрики</li>
+                    <li class="column__item">Демонтаж дверей</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/price.svg" alt="">
-                  <p class="info__text">Стоимость 694 200 руб.</p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Черновые работы</p>
+                  <ul class="services__column__list">
+                    <li class="column__item">Грунтовка стен и пола</li>
+                    <li class="column__item">Шпатлевка и штукатурка стен</li>
+                    <li class="column__item">Устройство наливных полов</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
-                  <p class="info__text">ЖК Пятницкие кварталы</p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Чистовые работы</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Настил линолеума, ковролина</li>
+                    <li class="column__item">Монтаж плинтусов</li>
+                    <li class="column__item">Оклейка стен обоями</li>
+                    <li class="column__item">Устройство откосов из ПВХ-панелей, сендвич-панелей</li>
+                    <li class="column__item">Настил линолеума, ковролина</li>
+                    <li class="column__item">Установка подоконников, отливов</li>
+                    <li class="column__item">Установка межкомнатных дверей</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/square.svg" alt="">
-                  <p class="info__text">Площадь 64 м<span>²</span></p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Электрика</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Монтаж электроточки</li>
+                    <li class="column__item">Прокладка кабеля</li>
+                    <li class="column__item">Штробление стен под электрокабель</li>
+                  </ul>
                 </div>
               </div>
-              <button class="btn info__btn">Заказать</button>
+              <h3 class="services__flex"> 
+                <div class="services__flex__item">
+                  <div class="services__price">Цена:</div>
+                  <div class="services__price-old">5200 руб/м<sup>2</sup></div>
+                  <div class="services__price-new">5200 руб/м<sup>2</sup></div>
+                </div>
+                <div class="services__flex__item">
+                  <div class="services__date">Срок:</div>
+                  <div class="services__days">от 5 дней</div>
+                </div>
+                <button class="services__btn btn">Заказать</button>
+              </h3>
             </li>
-            <li class="objects__item">
-              <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
-              <div class="item__info">
-                <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
-                  <p class="info__text">Капитальный ремонт</p>
+            <li class="services__item">
+              <h3 class="services__flex"> 
+                <p class="services__heading-low">Косметический ремонт</p>
+                <ul class="services__list-card">
+                  <li class="list-card__item">Демонтаж</li>
+                  <li class="list-card__item">Черновые работы</li>
+                  <li class="list-card__item">Чистовые работы</li>
+                  <li class="list-card__item">Электрика</li>
+                </ul><img class="services__img" src="img/dots-black.svg" alt="">
+              </h3>
+              <div class="services__flex-special">
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Демонтаж</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Демонтаж старых покрытий</li>
+                    <li class="column__item">Демонтаж старой электрики</li>
+                    <li class="column__item">Демонтаж дверей</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/price.svg" alt="">
-                  <p class="info__text">Стоимость 694 200 руб.</p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Черновые работы</p>
+                  <ul class="services__column__list">
+                    <li class="column__item">Грунтовка стен и пола</li>
+                    <li class="column__item">Шпатлевка и штукатурка стен</li>
+                    <li class="column__item">Устройство наливных полов</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
-                  <p class="info__text">ЖК Пятницкие кварталы</p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Чистовые работы</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Настил линолеума, ковролина</li>
+                    <li class="column__item">Монтаж плинтусов</li>
+                    <li class="column__item">Оклейка стен обоями</li>
+                    <li class="column__item">Устройство откосов из ПВХ-панелей, сендвич-панелей</li>
+                    <li class="column__item">Настил линолеума, ковролина</li>
+                    <li class="column__item">Установка подоконников, отливов</li>
+                    <li class="column__item">Установка межкомнатных дверей</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/square.svg" alt="">
-                  <p class="info__text">Площадь 64 м<span>²</span></p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Электрика</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Монтаж электроточки</li>
+                    <li class="column__item">Прокладка кабеля</li>
+                    <li class="column__item">Штробление стен под электрокабель</li>
+                  </ul>
                 </div>
               </div>
-              <button class="btn info__btn">Заказать</button>
+              <h3 class="services__flex"> 
+                <div class="services__flex__item">
+                  <div class="services__price">Цена:</div>
+                  <div class="services__price-old">5200 руб/м<sup>2</sup></div>
+                  <div class="services__price-new">5200 руб/м<sup>2</sup></div>
+                </div>
+                <div class="services__flex__item">
+                  <div class="services__date">Срок:</div>
+                  <div class="services__days">от 5 дней</div>
+                </div>
+                <button class="services__btn btn">Заказать</button>
+              </h3>
             </li>
-            <li class="objects__item">
-              <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
-              <div class="item__info">
-                <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
-                  <p class="info__text">Капитальный ремонт</p>
+            <li class="services__item">
+              <h3 class="services__flex"> 
+                <p class="services__heading-low">Косметический ремонт</p>
+                <ul class="services__list-card">
+                  <li class="list-card__item">Демонтаж</li>
+                  <li class="list-card__item">Черновые работы</li>
+                  <li class="list-card__item">Чистовые работы</li>
+                  <li class="list-card__item">Электрика</li>
+                </ul><img class="services__img" src="img/dots-black.svg" alt="">
+              </h3>
+              <div class="services__flex-special">
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Демонтаж</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Демонтаж старых покрытий</li>
+                    <li class="column__item">Демонтаж старой электрики</li>
+                    <li class="column__item">Демонтаж дверей</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/price.svg" alt="">
-                  <p class="info__text">Стоимость 694 200 руб.</p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Черновые работы</p>
+                  <ul class="services__column__list">
+                    <li class="column__item">Грунтовка стен и пола</li>
+                    <li class="column__item">Шпатлевка и штукатурка стен</li>
+                    <li class="column__item">Устройство наливных полов</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
-                  <p class="info__text">ЖК Пятницкие кварталы</p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Чистовые работы</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Настил линолеума, ковролина</li>
+                    <li class="column__item">Монтаж плинтусов</li>
+                    <li class="column__item">Оклейка стен обоями</li>
+                    <li class="column__item">Устройство откосов из ПВХ-панелей, сендвич-панелей</li>
+                    <li class="column__item">Настил линолеума, ковролина</li>
+                    <li class="column__item">Установка подоконников, отливов</li>
+                    <li class="column__item">Установка межкомнатных дверей</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/square.svg" alt="">
-                  <p class="info__text">Площадь 64 м<span>²</span></p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Электрика</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Монтаж электроточки</li>
+                    <li class="column__item">Прокладка кабеля</li>
+                    <li class="column__item">Штробление стен под электрокабель</li>
+                  </ul>
                 </div>
               </div>
-              <button class="btn info__btn">Заказать</button>
+              <h3 class="services__flex"> 
+                <div class="services__flex__item">
+                  <div class="services__price">Цена:</div>
+                  <div class="services__price-old">5200 руб/м<sup>2</sup></div>
+                  <div class="services__price-new">5200 руб/м<sup>2</sup></div>
+                </div>
+                <div class="services__flex__item">
+                  <div class="services__date">Срок:</div>
+                  <div class="services__days">от 5 дней</div>
+                </div>
+                <button class="services__btn btn">Заказать</button>
+              </h3>
             </li>
-            <li class="objects__item">
-              <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
-              <div class="item__info">
-                <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
-                  <p class="info__text">Капитальный ремонт</p>
+            <li class="services__item">
+              <h3 class="services__flex"> 
+                <p class="services__heading-low">Косметический ремонт</p>
+                <ul class="services__list-card">
+                  <li class="list-card__item">Демонтаж</li>
+                  <li class="list-card__item">Черновые работы</li>
+                  <li class="list-card__item">Чистовые работы</li>
+                  <li class="list-card__item">Электрика</li>
+                </ul><img class="services__img" src="img/dots-black.svg" alt="">
+              </h3>
+              <div class="services__flex-special">
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Демонтаж</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Демонтаж старых покрытий</li>
+                    <li class="column__item">Демонтаж старой электрики</li>
+                    <li class="column__item">Демонтаж дверей</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/price.svg" alt="">
-                  <p class="info__text">Стоимость 694 200 руб.</p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Черновые работы</p>
+                  <ul class="services__column__list">
+                    <li class="column__item">Грунтовка стен и пола</li>
+                    <li class="column__item">Шпатлевка и штукатурка стен</li>
+                    <li class="column__item">Устройство наливных полов</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
-                  <p class="info__text">ЖК Пятницкие кварталы</p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Чистовые работы</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Настил линолеума, ковролина</li>
+                    <li class="column__item">Монтаж плинтусов</li>
+                    <li class="column__item">Оклейка стен обоями</li>
+                    <li class="column__item">Устройство откосов из ПВХ-панелей, сендвич-панелей</li>
+                    <li class="column__item">Настил линолеума, ковролина</li>
+                    <li class="column__item">Установка подоконников, отливов</li>
+                    <li class="column__item">Установка межкомнатных дверей</li>
+                  </ul>
                 </div>
-                <div class="info"> <img class="info__img" src="img/square.svg" alt="">
-                  <p class="info__text">Площадь 64 м<span>²</span></p>
-                </div>
-              </div>
-              <button class="btn info__btn">Заказать</button>
-            </li>
-            <li class="objects__item">
-              <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
-              <div class="item__info">
-                <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
-                  <p class="info__text">Капитальный ремонт</p>
-                </div>
-                <div class="info"> <img class="info__img" src="img/price.svg" alt="">
-                  <p class="info__text">Стоимость 694 200 руб.</p>
-                </div>
-                <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
-                  <p class="info__text">ЖК Пятницкие кварталы</p>
-                </div>
-                <div class="info"> <img class="info__img" src="img/square.svg" alt="">
-                  <p class="info__text">Площадь 64 м<span>²</span></p>
-                </div>
-              </div>
-              <button class="btn info__btn">Заказать</button>
-            </li>
-            <li class="objects__item">
-              <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
-              <div class="item__info">
-                <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
-                  <p class="info__text">Капитальный ремонт</p>
-                </div>
-                <div class="info"> <img class="info__img" src="img/price.svg" alt="">
-                  <p class="info__text">Стоимость 694 200 руб.</p>
-                </div>
-                <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
-                  <p class="info__text">ЖК Пятницкие кварталы</p>
-                </div>
-                <div class="info"> <img class="info__img" src="img/square.svg" alt="">
-                  <p class="info__text">Площадь 64 м<span>²</span></p>
+                <div class="services__flex__column">
+                  <p class="services__column__heading">Электрика</p>
+                  <ul class="services__column__list"> 
+                    <li class="column__item">Монтаж электроточки</li>
+                    <li class="column__item">Прокладка кабеля</li>
+                    <li class="column__item">Штробление стен под электрокабель</li>
+                  </ul>
                 </div>
               </div>
-              <button class="btn info__btn">Заказать</button>
+              <h3 class="services__flex"> 
+                <div class="services__flex__item">
+                  <div class="services__price">Цена:</div>
+                  <div class="services__price-old">5200 руб/м<sup>2</sup></div>
+                  <div class="services__price-new">5200 руб/м<sup>2</sup></div>
+                </div>
+                <div class="services__flex__item">
+                  <div class="services__date">Срок:</div>
+                  <div class="services__days">от 5 дней</div>
+                </div>
+                <button class="services__btn btn">Заказать</button>
+              </h3>
             </li>
           </ul>
         </div>
-      </section>
-      <section class="license">
-        <div class="container">
-          <div class="license__wrapper"><img class="license__img" src="img/license.png" alt="">
-            <div class="license__flex">
-              <h2 class="license__heading">Гарантируем честность сделки</h2>
-              <ul class="license__list"> 
-                <li class="license__item"> 
-                  <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
-                    <div class="license__text">Участие в трендах</div>
-                  </div>
-                  <p class="license__content" id="one">Вы можете ознакомится подробнее с тендерами нашей компании, перейдя по ссылке</p>
-                  <button class="license__link">Посмотреть подробнее</button>
-                </li>
-                <li class="license__item"> 
-                  <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
-                    <div class="license__text">Открытые документы</div>
-                  </div>
-                  <p class="license__content" id="two">Можно скачать договор подряда и пример сметы на строительство дома.</p>
-                </li>
-                <li class="license__item"> 
-                  <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
-                    <div class="license__text">Открытые объекты</div>
-                  </div>
-                  <p class="license__content" id="three">Можем показать дома, которые мы построили, или которые строим сейчас.</p>
-                </li>
-                <li class="license__item"> 
-                  <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
-                    <div class="license__text">Фиксированная стоимость</div>
-                  </div>
-                  <p class="license__content" id="four">Стоимость будет отражена в договоре и изменению не подлежит.</p>
-                </li>
-              </ul>
+      </div>
+    </section>
+    <section class="why"> 
+      <div class="container"> 
+        <div class="why__container">
+          <h2 class="why__heading">Почему стоит обратиться именно к нам?</h2>
+          <ul class="why__list"> 
+            <li class="why__item" id="why-one"> 
+              <div class="why__wrapper"> <img src="img/partner.svg" alt=""></div>
+              <p class="why__text">Партнерская скидка </p>
+              <div class="why__content">Предлагаем <span>10% скидку</span> на все товары магазина ЛеруаМарлен и наших партнеров. </div>
+            </li>
+            <li class="why__item" id="why-two"> 
+              <div class="why__wrapper"> <img src="img/personal.svg" alt=""></div>
+              <p class="why__text">Индивидуальный проект</p>
+              <div class="why__content">Выберете понравившиеся интерьеры и с нашими дизайнером и техническим директором <span>за три часа вы нарисуете дом мечты.</span></div>
+            </li>
+            <li class="why__item" id="why-three"> 
+              <div class="why__wrapper"> <img src="img/calculate.svg" alt=""></div>
+              <p class="why__text">Расчёт по проекту</p>
+              <div class="why__content">Можно загрузить эскиз для <span>расчета стоимости строительства.</span> Все необходимые изменения и доработки внесет наш архитектор по Вашим пожеланиям.</div>
+            </li>
+            <li class="why__item" id="why-four">
+              <div class="why__wrapper"> <img src="img/all-in.svg" alt=""></div>
+              <p class="why__text">Все включено</p>
+              <div class="why__content">Доставка и незапланированные расходы <span>включены в стоимость.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="objects">
+      <div class="container">
+        <h2 class="objects__heading">Объекты, которые мы уже выполнили</h2>
+        <ul class="objects__flex">
+          <li class="objects__item">
+            <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
+            <div class="item__info">
+              <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
+                <p class="info__text">Капитальный ремонт</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/price.svg" alt="">
+                <p class="info__text">Стоимость 694 200 руб.</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
+                <p class="info__text">ЖК Пятницкие кварталы</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/square.svg" alt="">
+                <p class="info__text">Площадь 64 м<span>²</span></p>
+              </div>
             </div>
+            <button class="btn info__btn">Заказать</button>
+          </li>
+          <li class="objects__item">
+            <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
+            <div class="item__info">
+              <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
+                <p class="info__text">Капитальный ремонт</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/price.svg" alt="">
+                <p class="info__text">Стоимость 694 200 руб.</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
+                <p class="info__text">ЖК Пятницкие кварталы</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/square.svg" alt="">
+                <p class="info__text">Площадь 64 м<span>²</span></p>
+              </div>
+            </div>
+            <button class="btn info__btn">Заказать</button>
+          </li>
+          <li class="objects__item">
+            <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
+            <div class="item__info">
+              <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
+                <p class="info__text">Капитальный ремонт</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/price.svg" alt="">
+                <p class="info__text">Стоимость 694 200 руб.</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
+                <p class="info__text">ЖК Пятницкие кварталы</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/square.svg" alt="">
+                <p class="info__text">Площадь 64 м<span>²</span></p>
+              </div>
+            </div>
+            <button class="btn info__btn">Заказать</button>
+          </li>
+          <li class="objects__item">
+            <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
+            <div class="item__info">
+              <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
+                <p class="info__text">Капитальный ремонт</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/price.svg" alt="">
+                <p class="info__text">Стоимость 694 200 руб.</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
+                <p class="info__text">ЖК Пятницкие кварталы</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/square.svg" alt="">
+                <p class="info__text">Площадь 64 м<span>²</span></p>
+              </div>
+            </div>
+            <button class="btn info__btn">Заказать</button>
+          </li>
+          <li class="objects__item">
+            <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
+            <div class="item__info">
+              <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
+                <p class="info__text">Капитальный ремонт</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/price.svg" alt="">
+                <p class="info__text">Стоимость 694 200 руб.</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
+                <p class="info__text">ЖК Пятницкие кварталы</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/square.svg" alt="">
+                <p class="info__text">Площадь 64 м<span>²</span></p>
+              </div>
+            </div>
+            <button class="btn info__btn">Заказать</button>
+          </li>
+          <li class="objects__item">
+            <div class="item__heading">Капитальный ремонт квартиры</div><img class="item__img" src="img/test-img.png" alt="">
+            <div class="item__info">
+              <div class="info"> <img class="info__img" src="img/fix.svg" alt="">
+                <p class="info__text">Капитальный ремонт</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/price.svg" alt="">
+                <p class="info__text">Стоимость 694 200 руб.</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/geo.svg" alt="">
+                <p class="info__text">ЖК Пятницкие кварталы</p>
+              </div>
+              <div class="info"> <img class="info__img" src="img/square.svg" alt="">
+                <p class="info__text">Площадь 64 м<span>²</span></p>
+              </div>
+            </div>
+            <button class="btn info__btn">Заказать</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="license">
+      <div class="container">
+        <div class="license__wrapper"><img class="license__img" src="img/license.png" alt="">
+          <div class="license__flex">
+            <h2 class="license__heading">Гарантируем честность сделки</h2>
+            <ul class="license__list"> 
+              <li class="license__item"> 
+                <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
+                  <div class="license__text">Участие в трендах</div>
+                </div>
+                <p class="license__content" id="one">Вы можете ознакомится подробнее с тендерами нашей компании, перейдя по ссылке</p>
+                <button class="license__link">Посмотреть подробнее</button>
+              </li>
+              <li class="license__item"> 
+                <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
+                  <div class="license__text">Открытые документы</div>
+                </div>
+                <p class="license__content" id="two">Можно скачать договор подряда и пример сметы на строительство дома.</p>
+              </li>
+              <li class="license__item"> 
+                <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
+                  <div class="license__text">Открытые объекты</div>
+                </div>
+                <p class="license__content" id="three">Можем показать дома, которые мы построили, или которые строим сейчас.</p>
+              </li>
+              <li class="license__item"> 
+                <div class="license__item__flex"> <img class="license__svg" src="img/agreement.svg" alt="">
+                  <div class="license__text">Фиксированная стоимость</div>
+                </div>
+                <p class="license__content" id="four">Стоимость будет отражена в договоре и изменению не подлежит.</p>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-      <section class="calculator">
-        <div class="container"> 
-          <div class="calculator__wrapper">
-            <h2 class="calculator__heading">Калькулятор</h2>
-            <form class="calculator__block" action="#">
-              <h3 class="calculator__heading-low">Тип ремонта</h3>
-              <div class="calculator__flex">
-                <div class="calculator__input-wrapper">
-                  <input class="calculator__radio" type="radio" id="cap" name="type" checked>
-                  <label class="calculator-example__label" for="cap">Капитальный</label>
-                </div>
-                <div class="calculator__input-wrapper">
-                  <input class="calculator__radio" type="radio" id="cosm" name="type">
-                  <label class="calculator-example__label" for="cosm">Косметический</label>
-                </div>
-                <div class="calculator__input-wrapper">
-                  <input class="calculator__radio" type="radio" id="key" name="type">
-                  <label class="calculator-example__label" for="key">Под ключ</label>
-                </div>
+      </div>
+    </section>
+    <section class="calculator">
+      <div class="container"> 
+        <div class="calculator__wrapper">
+          <h2 class="calculator__heading">Калькулятор</h2>
+          <form class="calculator__block" action="#">
+            <h3 class="calculator__heading-low">Тип ремонта</h3>
+            <div class="calculator__flex">
+              <div class="calculator__input-wrapper">
+                <input class="calculator__radio" type="radio" id="cap" name="type" checked>
+                <label class="calculator-example__label" for="cap">Капитальный</label>
               </div>
-              <div class="calculator__flex-column">
-                <div class="calculator__text">Площадь, м<sup>2</sup>: </div>
-                <div class="calculator__same-line">
+              <div class="calculator__input-wrapper">
+                <input class="calculator__radio" type="radio" id="cosm" name="type">
+                <label class="calculator-example__label" for="cosm">Косметический</label>
+              </div>
+              <div class="calculator__input-wrapper">
+                <input class="calculator__radio" type="radio" id="key" name="type">
+                <label class="calculator-example__label" for="key">Под ключ</label>
+              </div>
+            </div>
+            <div class="calculator__flex-column">
+              <div class="calculator__text">Площадь, м<sup>2</sup>: </div>
+              <div class="calculator__same-line">
+                <div class="calculator__block-m">
                   <input class="calculator__value" type="number" value="50" min="1" max="500" id="calcValue">
-                  <div class="calculator__change" id="change">50</div>
-                  <div class="calculator__content">м<sup>2</sup></div>
-                  <input class="calculator__range" type="range" name="range" id="range" min="1" max="500" value="50">
                 </div>
+                <div class="calculator__change" id="change">50</div>
+                <div class="calculator__content">м<sup>2</sup></div>
+                <input class="calculator__range" type="range" name="range" id="range" min="1" max="500" value="50">
               </div>
-              <div class="calculator__flex-column">
-                <div class="calculator__text">Выберите дополнительные услуги:</div>
-                <div class="calculator__flex-checkbox">
-                  <div class="calculator__flex-item calculator__flex-item-one">
-                    <div class="calculator__input-wrapper">
-                      <input class="calculator__radio" type="checkbox" id="gkl" name="plus">
-                      <label class="calculator-example__label" for="gkl">Устройство разноуровневого потолка из ГКЛ</label>
-                    </div>
-                    <div class="calculator__input-wrapper">
-                      <input class="calculator__radio" type="checkbox" id="decor" name="plus">
-                      <label class="calculator-example__label" for="decor">Декоративная штукатурка стен</label>
-                    </div>
-                    <div class="calculator__input-wrapper">
-                      <input class="calculator__radio" type="checkbox" id="cond" name="plus">
-                      <label class="calculator-example__label" for="cond">Монтаж кондиционеров</label>
-                    </div>
-                    <div class="calculator__input-wrapper">
-                      <input class="calculator__radio" type="checkbox" id="floor" name="plus">
-                      <label class="calculator-example__label" for="floor">Устройство пола из массива или инженерной доски</label>
-                    </div>
-                  </div>
-                  <div class="calculator__flex-item">
-                    <div class="calculator__input-wrapper">
-                      <input class="calculator__radio" type="checkbox" id="doors" name="plus">
-                      <label class="calculator-example__label" for="doors">Установка межкомнатных дверей</label>
-                    </div>
-                    <div class="calculator__input-wrapper">
-                      <input class="calculator__radio" type="checkbox" id="ceiling" name="plus">
-                      <label class="calculator-example__label" for="ceiling">Штукатурка потолка</label>
-                    </div>
-                    <div class="calculator__input-wrapper">
-                      <input class="calculator__radio" type="checkbox" id="walls" name="plus">
-                      <label class="calculator-example__label" for="walls">Шумоизоляция стен</label>
-                    </div>
-                    <div class="calculator__input-wrapper">
-                      <input class="calculator__radio" type="checkbox" id="pipes" name="plus">
-                      <label class="calculator-example__label" for="pipes">Разводка труб водоснабжения коллекторной системой</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calculator__flex__item">
-                  <input class="calculator__btn" type="submit" value="Рассчитать">
-                  <div class="calculator__price-text">Примерная стоимость работ:</div>
-                  <div class="calculator__price-line">
-                    <div class="calculator__price">191 250</div>
-                    <div class="calculator__rub-price">рублей</div>
-                  </div>
-                  <div class="calculator__sale-text">Ваша скидка:</div>
-                  <div class="calculator__sale-line">
-                    <div class="calculator__sale">19 250</div>
-                    <div class="calculator__rub">рублей</div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-      <section class="slider">
-        <div class="container"> 
-          <div class="slider__content">
-            <h2 class="slider__heading">Пример дизайн-проекта</h2>
-            <div class="slider__flex">
-              <div class="slider__item">
-                <div class="slider__column">
-                  <div class="slider__text">Выберите тип проекта, чтобы посмотреть примеры</div>
-                  <div class="slider__radio-flex">
-                    <div class="slider__input-wrapper">
-                      <input class="slider__radio" type="radio" id="plan" name="plus" checked>
-                      <label class="slider__label" for="plan">"Планировочный"</label>
-                    </div>
-                    <div class="slider__input-wrapper">
-                      <input class="slider__radio" type="radio" id="standart" name="plus">
-                      <label class="slider__label" for="standart">"Стандарт"</label>
-                    </div>
-                    <div class="slider__input-wrapper">
-                      <input class="slider__radio" type="radio" id="max" name="plus">
-                      <label class="slider__label" for="max">"Максимальный"</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="slider__btn">Скачать пример дизайн-проекта “Максимальный”</button>
             </div>
-          </div>
-          <div class="slider__block"><img class="slider__img" src="img/test-img.png" alt="">
-            <div class="swiper slider__swiper">
-              <div class="swiper-wrapper slider__wrapper">
-                <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
-                <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
-                <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
-                <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
+            <div class="calculator__flex-column">
+              <div class="calculator__text">Выберите дополнительные услуги:</div>
+              <div class="calculator__flex-checkbox">
+                <div class="calculator__flex-item calculator__flex-item-one">
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__radio" type="checkbox" id="gkl" name="plus">
+                    <label class="calculator-example__label" for="gkl">Устройство разноуровневого потолка из ГКЛ</label>
+                  </div>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__radio" type="checkbox" id="decor" name="plus">
+                    <label class="calculator-example__label" for="decor">Декоративная штукатурка стен</label>
+                  </div>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__radio" type="checkbox" id="cond" name="plus">
+                    <label class="calculator-example__label" for="cond">Монтаж кондиционеров</label>
+                  </div>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__radio" type="checkbox" id="floor" name="plus">
+                    <label class="calculator-example__label" for="floor">Устройство пола из массива или инженерной доски</label>
+                  </div>
+                </div>
+                <div class="calculator__flex-item">
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__radio" type="checkbox" id="doors" name="plus">
+                    <label class="calculator-example__label" for="doors">Установка межкомнатных дверей</label>
+                  </div>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__radio" type="checkbox" id="ceiling" name="plus">
+                    <label class="calculator-example__label" for="ceiling">Штукатурка потолка</label>
+                  </div>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__radio" type="checkbox" id="walls" name="plus">
+                    <label class="calculator-example__label" for="walls">Шумоизоляция стен</label>
+                  </div>
+                  <div class="calculator__input-wrapper">
+                    <input class="calculator__radio" type="checkbox" id="pipes" name="plus">
+                    <label class="calculator-example__label" for="pipes">Разводка труб водоснабжения коллекторной системой</label>
+                  </div>
+                </div>
               </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="map"> 
-        <div class="container">
-          <h2 class="map__heading">Текущие объекты на карте</h2>
-          <div class="map__block" id="map"></div>
-        </div>
-      </section>
-      <section class="order">
-        <div class="container">
-          <h2 class="order__heading">Заявка на консультацию</h2>
-          <p class="order__text">Заполните форму, наш менеджер свяжется с вами и ответит на любые вопросы</p>
-          <form class="order__form">
-            <div class="order__flex">
-              <div class="order__wrapper">
-                <label class="order__label" for="name">Ваше имя</label>
-                <input class="order__input" type="text" name="name" id="name" placeholder="Антон">
+              <div class="calculator__flex__item">
+                <input class="calculator__btn" type="submit" value="Рассчитать">
+                <div class="calculator__price-text">Примерная стоимость работ:</div>
+                <div class="calculator__price-line">
+                  <div class="calculator__price">191 250</div>
+                  <div class="calculator__rub-price">рублей</div>
+                </div>
+                <div class="calculator__sale-text">Ваша скидка:</div>
+                <div class="calculator__sale-line">
+                  <div class="calculator__sale">19 250</div>
+                  <div class="calculator__rub">рублей</div>
+                </div>
               </div>
-              <div class="order__wrapper">
-                <label class="order__label" for="tel">Телефон</label>
-                <input class="order__input" type="tel" name="name" id="tel" placeholder="+7 (800) 535 35 35">
-              </div>
-              <input class="order__btn" type="submit" value="ОСТАВИТЬ ЗАЯВКУ">
             </div>
           </form>
         </div>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+    <section class="slider">
+      <div class="container"> 
+        <div class="slider__content">
+          <h2 class="slider__heading">Пример дизайн-проекта</h2>
+          <div class="slider__flex">
+            <div class="slider__item">
+              <div class="slider__column">
+                <div class="slider__text">Выберите тип проекта, чтобы посмотреть примеры</div>
+                <div class="slider__radio-flex">
+                  <div class="slider__input-wrapper">
+                    <input class="slider__radio" type="radio" id="plan" name="plus" checked>
+                    <label class="slider__label" for="plan">"Планировочный"</label>
+                  </div>
+                  <div class="slider__input-wrapper">
+                    <input class="slider__radio" type="radio" id="standart" name="plus">
+                    <label class="slider__label" for="standart">"Стандарт"</label>
+                  </div>
+                  <div class="slider__input-wrapper">
+                    <input class="slider__radio" type="radio" id="max" name="plus">
+                    <label class="slider__label" for="max">"Максимальный"</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="slider__btn">Скачать пример дизайн-проекта “Максимальный”</button>
+          </div>
+        </div>
+        <div class="slider__block"><img class="slider__img" src="img/test-img.png" alt="">
+          <div class="swiper slider__swiper">
+            <div class="swiper-wrapper slider__wrapper">
+              <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
+              <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
+              <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
+              <div class="swiper-slide slider__slide"><img class="slider__image" src="img/test-img.png" alt=""></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map"> 
+      <div class="container">
+        <h2 class="map__heading">Текущие объекты на карте</h2>
+        <div class="map__block" id="map"></div>
+      </div>
+    </section>
+    <section class="order">
+      <div class="container">
+        <h2 class="order__heading">Заявка на консультацию</h2>
+        <p class="order__text">Заполните форму, наш менеджер свяжется с вами и ответит на любые вопросы</p>
+        <form class="order__form">
+          <div class="order__flex">
+            <div class="order__wrapper">
+              <label class="order__label" for="name">Ваше имя</label>
+              <input class="order__input" type="text" name="name" id="nameSecond" placeholder="Антон">
+            </div>
+            <div class="order__wrapper">
+              <label class="order__label" for="tel">Телефон</label>
+              <input class="order__input" type="tel" name="name" id="telSecond" placeholder="+7 (800) 535 35 35">
+            </div>
+            <input class="order__btn" type="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="price"> 
+      <div class="container">
+        <div class="price__block">
+          <h2 class="price__heading">Цены на отдельные услуги</h2>
+          <div class="price__flex"> 
+            <div class="price__list"> 
+              <div class="price__item" id="first">
+                <h3 class="price__heading-low">Отделочные работы</h3>
+                <ul class="price__services">
+                  <li class="price__list-item">
+                    <p class="price__content">Устройство подвесного потолка из гипсокартона</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Шпатлёвка потолка</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Устройство стен из гипсокартона</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Грунтовка стен</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Штукатурка стен</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Шпатлёвка стен</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Устройство наливных полов</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Укладка ламината</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="price__item" id="second">
+                <h3 class="price__heading-low">Электромонтажные работы</h3>
+                <ul class="price__services">
+                  <li class="price__list-item">
+                    <p class="price__content">Прокладка кабеля в подвесном потолке (в гофре)</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Монтаж распаечной коробки с коммутацией</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Прокладка кабеля в штробе</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Установка электроточки</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Устройство распределительного щитка</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="price__list">
+              <div class="price__item" id="third"> 
+                <h3 class="price__heading-low">Сантехнические работы</h3>
+                <ul class="price__services">
+                  <li class="price__list-item">
+                    <p class="price__content">Монтаж и подключение водонагревателя</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Подключение стиральной или посудомоечной машины</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Монтаж и подключение раковины</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Монтаж и подключение унитаза</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Монтаж и подключение ванны</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="price__item" id="fourth">
+                <h3 class="price__heading-low">Демонтажные работы</h3>
+                <ul class="price__services">
+                  <li class="price__list-item">
+                    <p class="price__content">Демонтаж стен (перегородок) кирпичных (1/4,1/2) и шлакоблочных</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Демонтаж стен (перегородок) из ацеида, гипсолита, ГКЛ</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Демонтаж стеновых панелей</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Демонтаж дверных блоков</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                  <li class="price__list-item">
+                    <p class="price__content">Демонтаж цементной стяжки</p>
+                    <div class="price__text">от 945 руб./м²</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button class="price__btn">Скачать прайс-лист</button>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="container">
+        <div class="faq__block">
+          <h2 class="faq__heading">Ответы на вопросы</h2>
+          <ul class="faq__list" id="accordionNew">
+            <li class="faq__item">
+              <h3 class="faq__accordion-heading">Схема нашей работы <img src="img/green-arrow.svg" alt=""></h3>
+              <div class="faq__text">Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.</div>
+            </li>
+            <li class="faq__item"> 
+              <h3 class="faq__accordion-heading">Схема нашей работы <img src="img/green-arrow.svg" alt=""></h3>
+              <div class="faq__text">Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.</div>
+            </li>
+            <li class="faq__item"> 
+              <h3 class="faq__accordion-heading">Схема нашей работы <img src="img/green-arrow.svg" alt=""></h3>
+              <div class="faq__text">Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.</div>
+            </li>
+            <li class="faq__item"> 
+              <h3 class="faq__accordion-heading">Схема нашей работы <img src="img/green-arrow.svg" alt=""></h3>
+              <div class="faq__text">Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.</div>
+            </li>
+            <li class="faq__item"> 
+              <h3 class="faq__accordion-heading">Схема нашей работы <img src="img/green-arrow.svg" alt=""></h3>
+              <div class="faq__text">Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.</div>
+            </li>
+          </ul>
+          <div class="faq__flex">
+            <button class="faq__btn faq__btn-img"> 
+              <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+                <path d="M11 21L1 11L11 1" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <button class="faq__btn faq__btn-active">1</button>
+            <button class="faq__btn">2</button>
+            <button class="faq__btn faq__btn-img">
+              <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+                <path d="M1 1L11 11L1 21" stroke="#535353" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <div class="contants__block">
+          <div class="contacts__item"> </div>
+          <div class="contacts__item"> 
+            <div id="mapNew" style="width:800px; height:680px"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </html>

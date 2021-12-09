@@ -5,436 +5,699 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="normalize.css")
+        //- link(rel="stylesheet", href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css")
         link(rel="stylesheet", href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
         link(rel="stylesheet", href="main.css")
         script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
         script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
         script(src="js/index.js", defer)
+        script(src="https://code.jquery.com/jquery-3.6.0.js")
+        script(src="https://code.jquery.com/ui/1.13.0/jquery-ui.js")
         title СК Проект
     body
-        div.header-bg
-            header.header
-                div.container
-                    div.header__flex
-                        div.header__link
-                            img.header__logo(src="img/logo-header.svg", alt="") 
-                        nav.header__nav
-                            ul.nav__list 
-                                li.nav__item
-                                    a.nav__link(href="#") Услуги
-                                li.nav__item
-                                    a.nav__link(href="#") Наши работы 
-                                li.nav__item
-                                    a.nav__link(href="#") Калькулятор
-                                li.nav__item
-                                    a.nav__link(href="#") Контакты
-                        div.header__contacts
-                            div.contacts
-                                div.contacts__flex
-                                    img.contacts__tel(src="img/phone-green.svg", alt="")
-                                    a.contacts__phone(href="tel:+78003331140") 8 800 333-11-40
-                                div.contacts__flex
-                                    img.mail__img(src="img/mail-green.svg", alt="")
-                                    a.contacts__mail(href="mailto:info@intecocert.ru") info@intecocert.ru
-                            button.contacts__btn Заказать звонок
-            div.container(id="cont")
-                div.finishing
-                    div.finishing__content
-                        h2.finishing__heading Отделка заголовок какой-то тут будет
-                        p.finishing__text Какой-то краткий текст Какой-то краткий текст
-                        div.finishing__flex
-                            div.finishing__item
-                                img.finishing__img(src="img/speed.svg", alt="")
-                                p.finishing__advantage Какое-то преимущество
-                            div.finishing__item
-                                img.finishing__img(src="img/advantage.svg", alt="")
-                                p.finishing__advantage Преимущество
-                    form.finishing__form.form(action="#") 
-                        h3.finishing__form__heading  Оставьте заявку #[br.hide] на #[span бесплатную] консультацию с нашим менеджером
-                        div.form__wrapper
-                            p.form-text Как вас зовут?
-                            input.form__input(id="name", type="text", name="name", placeholder="Александр")
-                        div.form__wrapper
-                            p.form-text Ваш телефон
-                            input.form__input(id="tel", type="tel", name="tel", placeholder="8 (800) 535 35 35")
-                        input.finishing__form__btn(type="submit", value="Отправить заявку")
-        main.main 
-            section.services 
-                div.container 
-                    div.services-container
-                        h2.services__heading Наши услуги
-                        ul.services__list 
-                            li.services__item
-                                h3.services__flex 
-                                    p.services__heading-low Косметический ремонт
-                                    ul.services__list-card
-                                        li.list-card__item Демонтаж
-                                        li.list-card__item Черновые работы
-                                        li.list-card__item Чистовые работы
-                                        li.list-card__item Электрика
-                                    img.services__img(src="img/dots-blend.svg", alt="")
-                                div.services__flex-special
-                                    div.services__flex__column
-                                        p.services__column__heading Демонтаж
-                                        ul.services__column__list 
-                                            li.column__item Демонтаж старых покрытий
-                                            li.column__item Демонтаж старой электрики
-                                            li.column__item Демонтаж дверей
-                                    div.services__flex__column
-                                        p.services__column__heading Черновые работы
-                                        ul.services__column__list
-                                            li.column__item Грунтовка стен и пола
-                                            li.column__item Шпатлевка и штукатурка стен
-                                            li.column__item Устройство наливных полов
-                                    div.services__flex__column
-                                        p.services__column__heading Чистовые работы
-                                        ul.services__column__list 
-                                            li.column__item Настил линолеума, ковролина
-                                            li.column__item Монтаж плинтусов
-                                            li.column__item Оклейка стен обоями
-                                            li.column__item Устройство откосов из ПВХ-панелей, сендвич-панелей
-                                            li.column__item Настил линолеума, ковролина
-                                            li.column__item Установка подоконников, отливов
-                                            li.column__item Установка межкомнатных дверей
-                                    div.services__flex__column
-                                        p.services__column__heading Электрика
-                                        ul.services__column__list 
-                                            li.column__item Монтаж электроточки
-                                            li.column__item Прокладка кабеля
-                                            li.column__item Штробление стен под электрокабель
-                                div.services__flex 
-                                    div.services__flex__item
-                                        div.services__price Цена:
-                                        div.services__price-old 5200 руб/м#[sup 2]
-                                        div.services__price-new 5200 руб/м#[sup 2]
-                                    div.services__flex__item
-                                        div.services__date Срок:
-                                        div.services__days от 5 дней
-                                    button.services__btn.btn Заказать
-                            li.services__item
-                                div.services__flex 
-                                    p.services__heading-low Косметический ремонт
-                                    ul.services__list-card
-                                        li.list-card__item Демонтаж
-                                        li.list-card__item Черновые работы
-                                        li.list-card__item Чистовые работы
-                                        li.list-card__item Электрика
-                                    img.services__img(src="img/dots-black.svg", alt="")
-                                div.services__flex 
-                                    div.services__flex__item
-                                        div.services__price Цена:
-                                        div.services__price-old 5200 руб/м#[sup 2]
-                                        div.services__price-new 5200 руб/м#[sup 2]
-                                    div.services__flex__item
-                                        div.services__date Срок:
-                                        div.services__days от 5 дней
-                                    button.services__btn.btn Заказать
-                            li.services__item
-                                div.services__flex 
-                                    p.services__heading-low Косметический ремонт
-                                    ul.services__list-card
-                                        li.list-card__item Демонтаж
-                                        li.list-card__item Черновые работы
-                                        li.list-card__item Чистовые работы
-                                        li.list-card__item Электрика
-                                    img.services__img(src="img/dots-black.svg", alt="")
-                                div.services__flex 
-                                    div.services__flex__item
-                                        div.services__price Цена:
-                                        div.services__price-old 5200 руб/м#[sup 2]
-                                        div.services__price-new 5200 руб/м#[sup 2]
-                                    div.services__flex__item
-                                        div.services__date Срок:
-                                        div.services__days от 5 дней
-                                    button.services__btn.btn Заказать
-                            li.services__item
-                                div.services__flex 
-                                    p.services__heading-low Косметический ремонт
-                                    ul.services__list-card
-                                        li.list-card__item Демонтаж
-                                        li.list-card__item Черновые работы
-                                        li.list-card__item Чистовые работы
-                                        li.list-card__item Электрика
-                                    img.services__img(src="img/dots-black.svg", alt="")
-                                div.services__flex 
-                                    div.services__flex__item
-                                        div.services__price Цена:
-                                        div.services__price-old 5200 руб/м#[sup 2]
-                                        div.services__price-new 5200 руб/м#[sup 2]
-                                    div.services__flex__item
-                                        div.services__date Срок:
-                                        div.services__days от 5 дней
-                                    button.services__btn.btn Заказать
-            section.why 
-                div.container 
-                    div.why__container
-                        h2.why__heading Почему стоит обратиться именно к нам?
-                        ul.why__list 
-                            li.why__item(id="why-one") 
-                                div.why__wrapper 
-                                    img(src="img/partner.svg", alt="")
-                                p.why__text Партнерская скидка 
-                                div.why__content Предлагаем #[span 10% скидку] на все товары магазина ЛеруаМарлен и наших партнеров. 
-                            li.why__item(id="why-two") 
-                                div.why__wrapper 
-                                    img(src="img/personal.svg", alt="")
-                                p.why__text Индивидуальный проект
-                                div.why__content Выберете понравившиеся интерьеры и с нашими дизайнером и техническим директором #[span за три часа вы нарисуете дом мечты.]
-                            li.why__item(id="why-three") 
-                                div.why__wrapper 
-                                    img(src="img/calculate.svg", alt="")
-                                p.why__text Расчёт по проекту
-                                div.why__content Можно загрузить эскиз для #[span расчета стоимости строительства.] Все необходимые изменения и доработки внесет наш архитектор по Вашим пожеланиям.
-                            li.why__item(id="why-four")
-                                div.why__wrapper 
-                                    img(src="img/all-in.svg", alt="")
-                                p.why__text Все включено
-                                div.why__content Доставка и незапланированные расходы #[span включены в стоимость.]
-            section.objects
-                div.container
-                    h2.objects__heading Объекты, которые мы уже выполнили
-                    ul.objects__flex
-                        li.objects__item
-                            div.item__heading Капитальный ремонт квартиры
-                            img.item__img(src="img/test-img.png", alt="")
-                            div.item__info
-                                div.info 
-                                    img.info__img(src="img/fix.svg", alt="")
-                                    p.info__text Капитальный ремонт
-                                div.info 
-                                    img.info__img(src="img/price.svg", alt="")
-                                    p.info__text Стоимость 694 200 руб.
-                                div.info 
-                                    img.info__img(src="img/geo.svg", alt="")
-                                    p.info__text ЖК Пятницкие кварталы
-                                div.info 
-                                    img.info__img(src="img/square.svg", alt="")
-                                    p.info__text Площадь 64 м#[span ²]
-                            button.btn.info__btn Заказать
-                        li.objects__item
-                            div.item__heading Капитальный ремонт квартиры
-                            img.item__img(src="img/test-img.png", alt="")
-                            div.item__info
-                                div.info 
-                                    img.info__img(src="img/fix.svg", alt="")
-                                    p.info__text Капитальный ремонт
-                                div.info 
-                                    img.info__img(src="img/price.svg", alt="")
-                                    p.info__text Стоимость 694 200 руб.
-                                div.info 
-                                    img.info__img(src="img/geo.svg", alt="")
-                                    p.info__text ЖК Пятницкие кварталы
-                                div.info 
-                                    img.info__img(src="img/square.svg", alt="")
-                                    p.info__text Площадь 64 м#[span ²]
-                            button.btn.info__btn Заказать
-                        li.objects__item
-                            div.item__heading Капитальный ремонт квартиры
-                            img.item__img(src="img/test-img.png", alt="")
-                            div.item__info
-                                div.info 
-                                    img.info__img(src="img/fix.svg", alt="")
-                                    p.info__text Капитальный ремонт
-                                div.info 
-                                    img.info__img(src="img/price.svg", alt="")
-                                    p.info__text Стоимость 694 200 руб.
-                                div.info 
-                                    img.info__img(src="img/geo.svg", alt="")
-                                    p.info__text ЖК Пятницкие кварталы
-                                div.info 
-                                    img.info__img(src="img/square.svg", alt="")
-                                    p.info__text Площадь 64 м#[span ²]
-                            button.btn.info__btn Заказать
-                        li.objects__item
-                            div.item__heading Капитальный ремонт квартиры
-                            img.item__img(src="img/test-img.png", alt="")
-                            div.item__info
-                                div.info 
-                                    img.info__img(src="img/fix.svg", alt="")
-                                    p.info__text Капитальный ремонт
-                                div.info 
-                                    img.info__img(src="img/price.svg", alt="")
-                                    p.info__text Стоимость 694 200 руб.
-                                div.info 
-                                    img.info__img(src="img/geo.svg", alt="")
-                                    p.info__text ЖК Пятницкие кварталы
-                                div.info 
-                                    img.info__img(src="img/square.svg", alt="")
-                                    p.info__text Площадь 64 м#[span ²]
-                            button.btn.info__btn Заказать
-                        li.objects__item
-                            div.item__heading Капитальный ремонт квартиры
-                            img.item__img(src="img/test-img.png", alt="")
-                            div.item__info
-                                div.info 
-                                    img.info__img(src="img/fix.svg", alt="")
-                                    p.info__text Капитальный ремонт
-                                div.info 
-                                    img.info__img(src="img/price.svg", alt="")
-                                    p.info__text Стоимость 694 200 руб.
-                                div.info 
-                                    img.info__img(src="img/geo.svg", alt="")
-                                    p.info__text ЖК Пятницкие кварталы
-                                div.info 
-                                    img.info__img(src="img/square.svg", alt="")
-                                    p.info__text Площадь 64 м#[span ²]
-                            button.btn.info__btn Заказать
-                        li.objects__item
-                            div.item__heading Капитальный ремонт квартиры
-                            img.item__img(src="img/test-img.png", alt="")
-                            div.item__info
-                                div.info 
-                                    img.info__img(src="img/fix.svg", alt="")
-                                    p.info__text Капитальный ремонт
-                                div.info 
-                                    img.info__img(src="img/price.svg", alt="")
-                                    p.info__text Стоимость 694 200 руб.
-                                div.info 
-                                    img.info__img(src="img/geo.svg", alt="")
-                                    p.info__text ЖК Пятницкие кварталы
-                                div.info 
-                                    img.info__img(src="img/square.svg", alt="")
-                                    p.info__text Площадь 64 м#[span ²]
-                            button.btn.info__btn Заказать
-            section.license
-                div.container
-                    div.license__wrapper
-                        img.license__img(src="img/license.png", alt="")
-                        div.license__flex
-                            h2.license__heading Гарантируем честность сделки
-                            ul.license__list 
-                                li.license__item 
-                                    div.license__item__flex 
-                                        img.license__svg(src="img/agreement.svg", alt="")
-                                        div.license__text Участие в трендах
-                                    p.license__content(id="one") Вы можете ознакомится подробнее с тендерами нашей компании, перейдя по ссылке
-                                    button.license__link Посмотреть подробнее
-                                li.license__item 
-                                    div.license__item__flex 
-                                        img.license__svg(src="img/agreement.svg", alt="")
-                                        div.license__text Открытые документы
-                                    p.license__content(id="two") Можно скачать договор подряда и пример сметы на строительство дома.
-                                li.license__item 
-                                    div.license__item__flex 
-                                        img.license__svg(src="img/agreement.svg", alt="")
-                                        div.license__text Открытые объекты
-                                    p.license__content(id="three") Можем показать дома, которые мы построили, или которые строим сейчас.
-                                li.license__item 
-                                    div.license__item__flex 
-                                        img.license__svg(src="img/agreement.svg", alt="")
-                                        div.license__text Фиксированная стоимость
-                                    p.license__content(id="four") Стоимость будет отражена в договоре и изменению не подлежит.
-            section.calculator
-                div.container 
-                    div.calculator__wrapper
-                        h2.calculator__heading Калькулятор
-                        form(action="#").calculator__block
-                            h3.calculator__heading-low Тип ремонта
-                            div.calculator__flex
-                                div.calculator__input-wrapper
-                                    input.calculator__radio(type="radio" id="cap" name="type" checked)
-                                    label.calculator-example__label(for="cap") Капитальный
-                                div.calculator__input-wrapper
-                                    input.calculator__radio(type="radio" id="cosm" name="type")
-                                    label.calculator-example__label(for="cosm") Косметический
-                                div.calculator__input-wrapper
-                                    input.calculator__radio(type="radio" id="key" name="type")
-                                    label.calculator-example__label(for="key") Под ключ
-                            div.calculator__flex-column
-                                div.calculator__text Площадь, м#[sup 2]: 
-                                div.calculator__same-line
+    div.popup(id="popup")
+        div.popup__form(id="popup__form")
+            button.popup__btn(id="popup__btn")
+                svg(width="40", height="40", viewBox="0 0 40 40", fill="none", xmlns="http://www.w3.org/2000/svg")
+                    path(d="M31.25 8.75L8.75 31.25", stroke="#021705", stroke-opacity="0.7",stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+                    path(d="M31.25 31.25L8.75 8.75", stroke="#021705", stroke-opacity="0.7", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            h2.popup__heading Капитальный ремонт квартиры
+            ul.popup__list
+                li.popup__item 
+                    img.popup__img(src="img/fix.svg", alt="")
+                    div.popup__text Капитальный ремонт
+                li.popup__item 
+                    img.popup__img(src="img/price.svg", alt="")
+                    div.popup__text ЖК Пятницкие кварталы
+                li.popup__item 
+                    img.popup__img(src="img/geo.svg", alt="")
+                    div.popup__text Стоимость 694 200 руб.
+                li.popup__item 
+                    img.popup__img(src="img/square.svg", alt="")
+                    div.popup__text Площадь 64 м²
+            div.popup__slider
+                img.popup__slider-img(src="img/test-img.png", alt="")
+                div.swiper.popup__slider-block
+                        div.swiper-wrapper.popup__wrapper
+                            div.swiper-slide.popup__slide
+                                img.popup__slider-image.popup__active(src="img/test-img.png", alt="")
+                            div.swiper-slide.popup__slide
+                                img.popup__slider-image(src="img/test-img.png", alt="")
+                            div.swiper-slide.popup__slide
+                                img.popup__slider-image(src="img/test-img.png", alt="")
+                            div.swiper-slide.popup__slide
+                                img.popup__slider-image(src="img/test-img.png", alt="")
+                        div.slider-button-prev
+                        div.slider-button-next
+            div.popup__content
+                h4.popup__heading-low Список проведённых работ
+                ul.popup__list-low
+                    ul.popup__lists 
+                        li.popup__item-low Штукатурка стен
+                        li.popup__item-low Стяжка пола
+                        li.popup__item-low Монтах ХВС, ГВС, канализации
+                    ul.popup__lists 
+                        li.popup__item-low Монтаж электропроводки
+                        li.popup__item-low Укладка плитки
+                        li.popup__item-low Монтаж сантехоборудования
+                    ul.popup__lists
+                        li.popup__item-low Монтаж вентиляции
+                        li.popup__item-low Монтаж ГКЛ потолка
+                        li.popup__item-low Монтаж системы кондиционирования
+
+    div.header-bg
+        header.header
+            div.container
+                div.header__flex
+                    div.header__link
+                        img.header__logo(src="img/logo-header.svg", alt="") 
+                    nav.header__nav
+                        ul.nav__list 
+                            li.nav__item
+                                a.nav__link(href="#") Услуги
+                            li.nav__item
+                                a.nav__link(href="#") Наши работы 
+                            li.nav__item
+                                a.nav__link(href="#") Калькулятор
+                            li.nav__item
+                                a.nav__link(href="#") Контакты
+                    div.header__contacts
+                        div.contacts
+                            div.contacts__flex
+                                img.contacts__tel(src="img/phone-green.svg", alt="")
+                                a.contacts__phone(href="tel:+78003331140") 8 800 333-11-40
+                            div.contacts__flex
+                                img.mail__img(src="img/mail-green.svg", alt="")
+                                a.contacts__mail(href="mailto:info@intecocert.ru") info@intecocert.ru
+                        button.contacts__btn Заказать звонок
+        div.container(id="cont")
+            div.finishing
+                div.finishing__content
+                    h2.finishing__heading Отделка заголовок какой-то тут будет
+                    p.finishing__text Какой-то краткий текст Какой-то краткий текст
+                    div.finishing__flex
+                        div.finishing__item
+                            img.finishing__img(src="img/speed.svg", alt="")
+                            p.finishing__advantage Какое-то преимущество
+                        div.finishing__item
+                            img.finishing__img(src="img/advantage.svg", alt="")
+                            p.finishing__advantage Преимущество
+                form.finishing__form.form(action="#") 
+                    h3.finishing__form__heading  Оставьте заявку #[br.hide] на #[span бесплатную] консультацию с нашим менеджером
+                    div.form__wrapper
+                        p.form-text Как вас зовут?
+                        input.form__input(id="name", type="text", name="name", placeholder="Александр")
+                    div.form__wrapper
+                        p.form-text Ваш телефон
+                        input.form__input(id="tel", type="tel", name="tel", placeholder="8 (800) 535 35 35")
+                    input.finishing__form__btn(type="submit", value="Отправить заявку")
+    main.main 
+        section.services 
+            div.container 
+                div.services-container
+                    h2.services__heading Наши услуги
+                    ul.services__list(id="accordion")
+                        li.services__item
+                            h3.services__flex 
+                                p.services__heading-low Косметический ремонт
+                                ul.services__list-card
+                                    li.list-card__item Демонтаж
+                                    li.list-card__item Черновые работы
+                                    li.list-card__item Чистовые работы
+                                    li.list-card__item Электрика
+                                img.services__img(src="img/dots-blend.svg", alt="")
+                            div.services__flex-special
+                                div.services__flex__column
+                                    p.services__column__heading Демонтаж
+                                    ul.services__column__list 
+                                        li.column__item Демонтаж старых покрытий
+                                        li.column__item Демонтаж старой электрики
+                                        li.column__item Демонтаж дверей
+                                div.services__flex__column
+                                    p.services__column__heading Черновые работы
+                                    ul.services__column__list
+                                        li.column__item Грунтовка стен и пола
+                                        li.column__item Шпатлевка и штукатурка стен
+                                        li.column__item Устройство наливных полов
+                                div.services__flex__column
+                                    p.services__column__heading Чистовые работы
+                                    ul.services__column__list 
+                                        li.column__item Настил линолеума, ковролина
+                                        li.column__item Монтаж плинтусов
+                                        li.column__item Оклейка стен обоями
+                                        li.column__item Устройство откосов из ПВХ-панелей, сендвич-панелей
+                                        li.column__item Настил линолеума, ковролина
+                                        li.column__item Установка подоконников, отливов
+                                        li.column__item Установка межкомнатных дверей
+                                div.services__flex__column
+                                    p.services__column__heading Электрика
+                                    ul.services__column__list 
+                                        li.column__item Монтаж электроточки
+                                        li.column__item Прокладка кабеля
+                                        li.column__item Штробление стен под электрокабель
+                            h3.services__flex 
+                                div.services__flex__item
+                                    div.services__price Цена:
+                                    div.services__price-old 5200 руб/м#[sup 2]
+                                    div.services__price-new 5200 руб/м#[sup 2]
+                                div.services__flex__item
+                                    div.services__date Срок:
+                                    div.services__days от 5 дней
+                                button.services__btn.btn Заказать
+                        li.services__item
+                            h3.services__flex 
+                                p.services__heading-low Косметический ремонт
+                                ul.services__list-card
+                                    li.list-card__item Демонтаж
+                                    li.list-card__item Черновые работы
+                                    li.list-card__item Чистовые работы
+                                    li.list-card__item Электрика
+                                img.services__img(src="img/dots-black.svg", alt="")
+                            div.services__flex-special
+                                div.services__flex__column
+                                    p.services__column__heading Демонтаж
+                                    ul.services__column__list 
+                                        li.column__item Демонтаж старых покрытий
+                                        li.column__item Демонтаж старой электрики
+                                        li.column__item Демонтаж дверей
+                                div.services__flex__column
+                                    p.services__column__heading Черновые работы
+                                    ul.services__column__list
+                                        li.column__item Грунтовка стен и пола
+                                        li.column__item Шпатлевка и штукатурка стен
+                                        li.column__item Устройство наливных полов
+                                div.services__flex__column
+                                    p.services__column__heading Чистовые работы
+                                    ul.services__column__list 
+                                        li.column__item Настил линолеума, ковролина
+                                        li.column__item Монтаж плинтусов
+                                        li.column__item Оклейка стен обоями
+                                        li.column__item Устройство откосов из ПВХ-панелей, сендвич-панелей
+                                        li.column__item Настил линолеума, ковролина
+                                        li.column__item Установка подоконников, отливов
+                                        li.column__item Установка межкомнатных дверей
+                                div.services__flex__column
+                                    p.services__column__heading Электрика
+                                    ul.services__column__list 
+                                        li.column__item Монтаж электроточки
+                                        li.column__item Прокладка кабеля
+                                        li.column__item Штробление стен под электрокабель
+                            h3.services__flex 
+                                div.services__flex__item
+                                    div.services__price Цена:
+                                    div.services__price-old 5200 руб/м#[sup 2]
+                                    div.services__price-new 5200 руб/м#[sup 2]
+                                div.services__flex__item
+                                    div.services__date Срок:
+                                    div.services__days от 5 дней
+                                button.services__btn.btn Заказать
+                        li.services__item
+                            h3.services__flex 
+                                p.services__heading-low Косметический ремонт
+                                ul.services__list-card
+                                    li.list-card__item Демонтаж
+                                    li.list-card__item Черновые работы
+                                    li.list-card__item Чистовые работы
+                                    li.list-card__item Электрика
+                                img.services__img(src="img/dots-black.svg", alt="")
+                            div.services__flex-special
+                                div.services__flex__column
+                                    p.services__column__heading Демонтаж
+                                    ul.services__column__list 
+                                        li.column__item Демонтаж старых покрытий
+                                        li.column__item Демонтаж старой электрики
+                                        li.column__item Демонтаж дверей
+                                div.services__flex__column
+                                    p.services__column__heading Черновые работы
+                                    ul.services__column__list
+                                        li.column__item Грунтовка стен и пола
+                                        li.column__item Шпатлевка и штукатурка стен
+                                        li.column__item Устройство наливных полов
+                                div.services__flex__column
+                                    p.services__column__heading Чистовые работы
+                                    ul.services__column__list 
+                                        li.column__item Настил линолеума, ковролина
+                                        li.column__item Монтаж плинтусов
+                                        li.column__item Оклейка стен обоями
+                                        li.column__item Устройство откосов из ПВХ-панелей, сендвич-панелей
+                                        li.column__item Настил линолеума, ковролина
+                                        li.column__item Установка подоконников, отливов
+                                        li.column__item Установка межкомнатных дверей
+                                div.services__flex__column
+                                    p.services__column__heading Электрика
+                                    ul.services__column__list 
+                                        li.column__item Монтаж электроточки
+                                        li.column__item Прокладка кабеля
+                                        li.column__item Штробление стен под электрокабель
+                            h3.services__flex 
+                                div.services__flex__item
+                                    div.services__price Цена:
+                                    div.services__price-old 5200 руб/м#[sup 2]
+                                    div.services__price-new 5200 руб/м#[sup 2]
+                                div.services__flex__item
+                                    div.services__date Срок:
+                                    div.services__days от 5 дней
+                                button.services__btn.btn Заказать
+                        li.services__item
+                            h3.services__flex 
+                                p.services__heading-low Косметический ремонт
+                                ul.services__list-card
+                                    li.list-card__item Демонтаж
+                                    li.list-card__item Черновые работы
+                                    li.list-card__item Чистовые работы
+                                    li.list-card__item Электрика
+                                img.services__img(src="img/dots-black.svg", alt="")
+                            div.services__flex-special
+                                div.services__flex__column
+                                    p.services__column__heading Демонтаж
+                                    ul.services__column__list 
+                                        li.column__item Демонтаж старых покрытий
+                                        li.column__item Демонтаж старой электрики
+                                        li.column__item Демонтаж дверей
+                                div.services__flex__column
+                                    p.services__column__heading Черновые работы
+                                    ul.services__column__list
+                                        li.column__item Грунтовка стен и пола
+                                        li.column__item Шпатлевка и штукатурка стен
+                                        li.column__item Устройство наливных полов
+                                div.services__flex__column
+                                    p.services__column__heading Чистовые работы
+                                    ul.services__column__list 
+                                        li.column__item Настил линолеума, ковролина
+                                        li.column__item Монтаж плинтусов
+                                        li.column__item Оклейка стен обоями
+                                        li.column__item Устройство откосов из ПВХ-панелей, сендвич-панелей
+                                        li.column__item Настил линолеума, ковролина
+                                        li.column__item Установка подоконников, отливов
+                                        li.column__item Установка межкомнатных дверей
+                                div.services__flex__column
+                                    p.services__column__heading Электрика
+                                    ul.services__column__list 
+                                        li.column__item Монтаж электроточки
+                                        li.column__item Прокладка кабеля
+                                        li.column__item Штробление стен под электрокабель
+                            h3.services__flex 
+                                div.services__flex__item
+                                    div.services__price Цена:
+                                    div.services__price-old 5200 руб/м#[sup 2]
+                                    div.services__price-new 5200 руб/м#[sup 2]
+                                div.services__flex__item
+                                    div.services__date Срок:
+                                    div.services__days от 5 дней
+                                button.services__btn.btn Заказать
+        section.why 
+            div.container 
+                div.why__container
+                    h2.why__heading Почему стоит обратиться именно к нам?
+                    ul.why__list 
+                        li.why__item(id="why-one") 
+                            div.why__wrapper 
+                                img(src="img/partner.svg", alt="")
+                            p.why__text Партнерская скидка 
+                            div.why__content Предлагаем #[span 10% скидку] на все товары магазина ЛеруаМарлен и наших партнеров. 
+                        li.why__item(id="why-two") 
+                            div.why__wrapper 
+                                img(src="img/personal.svg", alt="")
+                            p.why__text Индивидуальный проект
+                            div.why__content Выберете понравившиеся интерьеры и с нашими дизайнером и техническим директором #[span за три часа вы нарисуете дом мечты.]
+                        li.why__item(id="why-three") 
+                            div.why__wrapper 
+                                img(src="img/calculate.svg", alt="")
+                            p.why__text Расчёт по проекту
+                            div.why__content Можно загрузить эскиз для #[span расчета стоимости строительства.] Все необходимые изменения и доработки внесет наш архитектор по Вашим пожеланиям.
+                        li.why__item(id="why-four")
+                            div.why__wrapper 
+                                img(src="img/all-in.svg", alt="")
+                            p.why__text Все включено
+                            div.why__content Доставка и незапланированные расходы #[span включены в стоимость.]
+        section.objects
+            div.container
+                h2.objects__heading Объекты, которые мы уже выполнили
+                ul.objects__flex
+                    li.objects__item
+                        div.item__heading Капитальный ремонт квартиры
+                        img.item__img(src="img/test-img.png", alt="")
+                        div.item__info
+                            div.info 
+                                img.info__img(src="img/fix.svg", alt="")
+                                p.info__text Капитальный ремонт
+                            div.info 
+                                img.info__img(src="img/price.svg", alt="")
+                                p.info__text Стоимость 694 200 руб.
+                            div.info 
+                                img.info__img(src="img/geo.svg", alt="")
+                                p.info__text ЖК Пятницкие кварталы
+                            div.info 
+                                img.info__img(src="img/square.svg", alt="")
+                                p.info__text Площадь 64 м#[span ²]
+                        button.btn.info__btn Заказать
+                    li.objects__item
+                        div.item__heading Капитальный ремонт квартиры
+                        img.item__img(src="img/test-img.png", alt="")
+                        div.item__info
+                            div.info 
+                                img.info__img(src="img/fix.svg", alt="")
+                                p.info__text Капитальный ремонт
+                            div.info 
+                                img.info__img(src="img/price.svg", alt="")
+                                p.info__text Стоимость 694 200 руб.
+                            div.info 
+                                img.info__img(src="img/geo.svg", alt="")
+                                p.info__text ЖК Пятницкие кварталы
+                            div.info 
+                                img.info__img(src="img/square.svg", alt="")
+                                p.info__text Площадь 64 м#[span ²]
+                        button.btn.info__btn Заказать
+                    li.objects__item
+                        div.item__heading Капитальный ремонт квартиры
+                        img.item__img(src="img/test-img.png", alt="")
+                        div.item__info
+                            div.info 
+                                img.info__img(src="img/fix.svg", alt="")
+                                p.info__text Капитальный ремонт
+                            div.info 
+                                img.info__img(src="img/price.svg", alt="")
+                                p.info__text Стоимость 694 200 руб.
+                            div.info 
+                                img.info__img(src="img/geo.svg", alt="")
+                                p.info__text ЖК Пятницкие кварталы
+                            div.info 
+                                img.info__img(src="img/square.svg", alt="")
+                                p.info__text Площадь 64 м#[span ²]
+                        button.btn.info__btn Заказать
+                    li.objects__item
+                        div.item__heading Капитальный ремонт квартиры
+                        img.item__img(src="img/test-img.png", alt="")
+                        div.item__info
+                            div.info 
+                                img.info__img(src="img/fix.svg", alt="")
+                                p.info__text Капитальный ремонт
+                            div.info 
+                                img.info__img(src="img/price.svg", alt="")
+                                p.info__text Стоимость 694 200 руб.
+                            div.info 
+                                img.info__img(src="img/geo.svg", alt="")
+                                p.info__text ЖК Пятницкие кварталы
+                            div.info 
+                                img.info__img(src="img/square.svg", alt="")
+                                p.info__text Площадь 64 м#[span ²]
+                        button.btn.info__btn Заказать
+                    li.objects__item
+                        div.item__heading Капитальный ремонт квартиры
+                        img.item__img(src="img/test-img.png", alt="")
+                        div.item__info
+                            div.info 
+                                img.info__img(src="img/fix.svg", alt="")
+                                p.info__text Капитальный ремонт
+                            div.info 
+                                img.info__img(src="img/price.svg", alt="")
+                                p.info__text Стоимость 694 200 руб.
+                            div.info 
+                                img.info__img(src="img/geo.svg", alt="")
+                                p.info__text ЖК Пятницкие кварталы
+                            div.info 
+                                img.info__img(src="img/square.svg", alt="")
+                                p.info__text Площадь 64 м#[span ²]
+                        button.btn.info__btn Заказать
+                    li.objects__item
+                        div.item__heading Капитальный ремонт квартиры
+                        img.item__img(src="img/test-img.png", alt="")
+                        div.item__info
+                            div.info 
+                                img.info__img(src="img/fix.svg", alt="")
+                                p.info__text Капитальный ремонт
+                            div.info 
+                                img.info__img(src="img/price.svg", alt="")
+                                p.info__text Стоимость 694 200 руб.
+                            div.info 
+                                img.info__img(src="img/geo.svg", alt="")
+                                p.info__text ЖК Пятницкие кварталы
+                            div.info 
+                                img.info__img(src="img/square.svg", alt="")
+                                p.info__text Площадь 64 м#[span ²]
+                        button.btn.info__btn Заказать
+        section.license
+            div.container
+                div.license__wrapper
+                    img.license__img(src="img/license.png", alt="")
+                    div.license__flex
+                        h2.license__heading Гарантируем честность сделки
+                        ul.license__list 
+                            li.license__item 
+                                div.license__item__flex 
+                                    img.license__svg(src="img/agreement.svg", alt="")
+                                    div.license__text Участие в трендах
+                                p.license__content(id="one") Вы можете ознакомится подробнее с тендерами нашей компании, перейдя по ссылке
+                                button.license__link Посмотреть подробнее
+                            li.license__item 
+                                div.license__item__flex 
+                                    img.license__svg(src="img/agreement.svg", alt="")
+                                    div.license__text Открытые документы
+                                p.license__content(id="two") Можно скачать договор подряда и пример сметы на строительство дома.
+                            li.license__item 
+                                div.license__item__flex 
+                                    img.license__svg(src="img/agreement.svg", alt="")
+                                    div.license__text Открытые объекты
+                                p.license__content(id="three") Можем показать дома, которые мы построили, или которые строим сейчас.
+                            li.license__item 
+                                div.license__item__flex 
+                                    img.license__svg(src="img/agreement.svg", alt="")
+                                    div.license__text Фиксированная стоимость
+                                p.license__content(id="four") Стоимость будет отражена в договоре и изменению не подлежит.
+        section.calculator
+            div.container 
+                div.calculator__wrapper
+                    h2.calculator__heading Калькулятор
+                    form(action="#").calculator__block
+                        h3.calculator__heading-low Тип ремонта
+                        div.calculator__flex
+                            div.calculator__input-wrapper
+                                input.calculator__radio(type="radio" id="cap" name="type" checked)
+                                label.calculator-example__label(for="cap") Капитальный
+                            div.calculator__input-wrapper
+                                input.calculator__radio(type="radio" id="cosm" name="type")
+                                label.calculator-example__label(for="cosm") Косметический
+                            div.calculator__input-wrapper
+                                input.calculator__radio(type="radio" id="key" name="type")
+                                label.calculator-example__label(for="key") Под ключ
+                        div.calculator__flex-column
+                            div.calculator__text Площадь, м#[sup 2]: 
+                            div.calculator__same-line
+                                div.calculator__block-m
                                     input(type="number" value="50" min="1" max="500" id="calcValue").calculator__value
-                                    div.calculator__change(id="change") 50
-                                    div.calculator__content м#[sup 2]
-                                    input.calculator__range(type="range", name="range" id="range" min="1" max="500" value="50")
-                            div.calculator__flex-column
-                                div.calculator__text Выберите дополнительные услуги:
-                                div.calculator__flex-checkbox
-                                    div.calculator__flex-item.calculator__flex-item-one
-                                        div.calculator__input-wrapper
-                                            input.calculator__radio(type="checkbox" id="gkl" name="plus")
-                                            label.calculator-example__label(for="gkl") Устройство разноуровневого потолка из ГКЛ
-                                        div.calculator__input-wrapper
-                                            input.calculator__radio(type="checkbox" id="decor" name="plus")
-                                            label.calculator-example__label(for="decor") Декоративная штукатурка стен
-                                        div.calculator__input-wrapper
-                                            input.calculator__radio(type="checkbox" id="cond" name="plus")
-                                            label.calculator-example__label(for="cond") Монтаж кондиционеров
-                                        div.calculator__input-wrapper
-                                            input.calculator__radio(type="checkbox" id="floor" name="plus")
-                                            label.calculator-example__label(for="floor") Устройство пола из массива или инженерной доски
-                                    div.calculator__flex-item
-                                        div.calculator__input-wrapper
-                                            input.calculator__radio(type="checkbox" id="doors" name="plus")
-                                            label.calculator-example__label(for="doors") Установка межкомнатных дверей
-                                        div.calculator__input-wrapper
-                                            input.calculator__radio(type="checkbox" id="ceiling" name="plus")
-                                            label.calculator-example__label(for="ceiling") Штукатурка потолка
-                                        div.calculator__input-wrapper
-                                            input.calculator__radio(type="checkbox" id="walls" name="plus")
-                                            label.calculator-example__label(for="walls") Шумоизоляция стен
-                                        div.calculator__input-wrapper
-                                            input.calculator__radio(type="checkbox" id="pipes" name="plus")
-                                            label.calculator-example__label(for="pipes") Разводка труб водоснабжения коллекторной системой
-                                div.calculator__flex__item
-                                    input.calculator__btn(type="submit", value="Рассчитать")
-                                    div.calculator__price-text Примерная стоимость работ:
-                                    div.calculator__price-line
-                                        div.calculator__price 191 250
-                                        div.calculator__rub-price рублей
-                                    div.calculator__sale-text Ваша скидка:
-                                    div.calculator__sale-line
-                                        div.calculator__sale 19 250
-                                        div.calculator__rub рублей
-            section.slider
-                div.container 
-                    div.slider__content
-                        h2.slider__heading Пример дизайн-проекта
-                        div.slider__flex
-                            div.slider__item
-                                div.slider__column
-                                    div.slider__text Выберите тип проекта, чтобы посмотреть примеры
-                                    div.slider__radio-flex
-                                        div.slider__input-wrapper
-                                            input.slider__radio(type="radio" id="plan" name="plus" checked)
-                                            label.slider__label(for="plan") "Планировочный"
-                                        div.slider__input-wrapper
-                                            input.slider__radio(type="radio" id="standart" name="plus")
-                                            label.slider__label(for="standart") "Стандарт"
-                                        div.slider__input-wrapper
-                                            input.slider__radio(type="radio" id="max" name="plus")
-                                            label.slider__label(for="max") "Максимальный"
-                            button.slider__btn Скачать пример дизайн-проекта “Максимальный”
-                    div.slider__block
-                        img.slider__img(src="img/test-img.png", alt="")
-                        div.swiper.slider__swiper
-                            div.swiper-wrapper.slider__wrapper
-                                div.swiper-slide.slider__slide
-                                    img.slider__image(src="img/test-img.png", alt="")
-                                div.swiper-slide.slider__slide
-                                    img.slider__image(src="img/test-img.png", alt="")
-                                div.swiper-slide.slider__slide
-                                    img.slider__image(src="img/test-img.png", alt="")
-                                div.swiper-slide.slider__slide
-                                    img.slider__image(src="img/test-img.png", alt="")
-                            div.swiper-button-prev
-                            div.swiper-button-next
-            section.map 
-                div.container
-                    h2.map__heading Текущие объекты на карте
-                    div.map__block(id="map")
-            section.order
-                div.container
-                    h2.order__heading Заявка на консультацию
-                    p.order__text Заполните форму, наш менеджер свяжется с вами и ответит на любые вопросы
-                    form.order__form
-                        div.order__flex
-                            div.order__wrapper
-                                label.order__label(for="name") Ваше имя
-                                input.order__input(type="text", name="name" id="name" placeholder="Антон")
-                            div.order__wrapper
-                                label.order__label(for="tel") Телефон
-                                input.order__input(type="tel", name="name" id="tel" placeholder="+7 (800) 535 35 35")
-                            input.order__btn(type="submit" value="ОСТАВИТЬ ЗАЯВКУ")
-
-
+                                div.calculator__change(id="change") 50
+                                div.calculator__content м#[sup 2]
+                                input.calculator__range(type="range", name="range" id="range" min="1" max="500" value="50")
+                        div.calculator__flex-column
+                            div.calculator__text Выберите дополнительные услуги:
+                            div.calculator__flex-checkbox
+                                div.calculator__flex-item.calculator__flex-item-one
+                                    div.calculator__input-wrapper
+                                        input.calculator__radio(type="checkbox" id="gkl" name="plus")
+                                        label.calculator-example__label(for="gkl") Устройство разноуровневого потолка из ГКЛ
+                                    div.calculator__input-wrapper
+                                        input.calculator__radio(type="checkbox" id="decor" name="plus")
+                                        label.calculator-example__label(for="decor") Декоративная штукатурка стен
+                                    div.calculator__input-wrapper
+                                        input.calculator__radio(type="checkbox" id="cond" name="plus")
+                                        label.calculator-example__label(for="cond") Монтаж кондиционеров
+                                    div.calculator__input-wrapper
+                                        input.calculator__radio(type="checkbox" id="floor" name="plus")
+                                        label.calculator-example__label(for="floor") Устройство пола из массива или инженерной доски
+                                div.calculator__flex-item
+                                    div.calculator__input-wrapper
+                                        input.calculator__radio(type="checkbox" id="doors" name="plus")
+                                        label.calculator-example__label(for="doors") Установка межкомнатных дверей
+                                    div.calculator__input-wrapper
+                                        input.calculator__radio(type="checkbox" id="ceiling" name="plus")
+                                        label.calculator-example__label(for="ceiling") Штукатурка потолка
+                                    div.calculator__input-wrapper
+                                        input.calculator__radio(type="checkbox" id="walls" name="plus")
+                                        label.calculator-example__label(for="walls") Шумоизоляция стен
+                                    div.calculator__input-wrapper
+                                        input.calculator__radio(type="checkbox" id="pipes" name="plus")
+                                        label.calculator-example__label(for="pipes") Разводка труб водоснабжения коллекторной системой
+                            div.calculator__flex__item
+                                input.calculator__btn(type="submit", value="Рассчитать")
+                                div.calculator__price-text Примерная стоимость работ:
+                                div.calculator__price-line
+                                    div.calculator__price 191 250
+                                    div.calculator__rub-price рублей
+                                div.calculator__sale-text Ваша скидка:
+                                div.calculator__sale-line
+                                    div.calculator__sale 19 250
+                                    div.calculator__rub рублей
+        section.slider
+            div.container 
+                div.slider__content
+                    h2.slider__heading Пример дизайн-проекта
+                    div.slider__flex
+                        div.slider__item
+                            div.slider__column
+                                div.slider__text Выберите тип проекта, чтобы посмотреть примеры
+                                div.slider__radio-flex
+                                    div.slider__input-wrapper
+                                        input.slider__radio(type="radio" id="plan" name="plus" checked)
+                                        label.slider__label(for="plan") "Планировочный"
+                                    div.slider__input-wrapper
+                                        input.slider__radio(type="radio" id="standart" name="plus")
+                                        label.slider__label(for="standart") "Стандарт"
+                                    div.slider__input-wrapper
+                                        input.slider__radio(type="radio" id="max" name="plus")
+                                        label.slider__label(for="max") "Максимальный"
+                        button.slider__btn Скачать пример дизайн-проекта “Максимальный”
+                div.slider__block
+                    img.slider__img(src="img/test-img.png", alt="")
+                    div.swiper.slider__swiper
+                        div.swiper-wrapper.slider__wrapper
+                            div.swiper-slide.slider__slide
+                                img.slider__image(src="img/test-img.png", alt="")
+                            div.swiper-slide.slider__slide
+                                img.slider__image(src="img/test-img.png", alt="")
+                            div.swiper-slide.slider__slide
+                                img.slider__image(src="img/test-img.png", alt="")
+                            div.swiper-slide.slider__slide
+                                img.slider__image(src="img/test-img.png", alt="")
+                        div.swiper-button-prev
+                        div.swiper-button-next
+        section.map 
+            div.container
+                h2.map__heading Текущие объекты на карте
+                div.map__block(id="map")
+        section.order
+            div.container
+                h2.order__heading Заявка на консультацию
+                p.order__text Заполните форму, наш менеджер свяжется с вами и ответит на любые вопросы
+                form.order__form
+                    div.order__flex
+                        div.order__wrapper
+                            label.order__label(for="name") Ваше имя
+                            input.order__input(type="text", name="name" id="nameSecond" placeholder="Антон")
+                        div.order__wrapper
+                            label.order__label(for="tel") Телефон
+                            input.order__input(type="tel", name="name" id="telSecond" placeholder="+7 (800) 535 35 35")
+                        input.order__btn(type="submit" value="ОСТАВИТЬ ЗАЯВКУ")
+        section.price 
+            div.container
+                div.price__block
+                    h2.price__heading Цены на отдельные услуги
+                    div.price__flex 
+                        div.price__list 
+                            div.price__item(id="first")
+                                h3.price__heading-low Отделочные работы
+                                ul.price__services
+                                    li.price__list-item
+                                        p.price__content Устройство подвесного потолка из гипсокартона
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Шпатлёвка потолка
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Устройство стен из гипсокартона
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Грунтовка стен
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Штукатурка стен
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Шпатлёвка стен
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Устройство наливных полов
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Укладка ламината
+                                        div.price__text от 945 руб./м²
+                            div.price__item(id="second")
+                                h3.price__heading-low Электромонтажные работы
+                                ul.price__services
+                                    li.price__list-item
+                                        p.price__content Прокладка кабеля в подвесном потолке (в гофре)
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Монтаж распаечной коробки с коммутацией
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Прокладка кабеля в штробе
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Установка электроточки
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Устройство распределительного щитка
+                                        div.price__text от 945 руб./м²
+                        div.price__list
+                            div.price__item(id="third") 
+                                h3.price__heading-low Сантехнические работы
+                                ul.price__services
+                                    li.price__list-item
+                                        p.price__content Монтаж и подключение водонагревателя
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Подключение стиральной или посудомоечной машины
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Монтаж и подключение раковины
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Монтаж и подключение унитаза
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Монтаж и подключение ванны
+                                        div.price__text от 945 руб./м²
+                            div.price__item(id="fourth")
+                                h3.price__heading-low Демонтажные работы
+                                ul.price__services
+                                    li.price__list-item
+                                        p.price__content Демонтаж стен (перегородок) кирпичных (1/4,1/2) и шлакоблочных
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Демонтаж стен (перегородок) из ацеида, гипсолита, ГКЛ
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Демонтаж стеновых панелей
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Демонтаж дверных блоков
+                                        div.price__text от 945 руб./м²
+                                    li.price__list-item
+                                        p.price__content Демонтаж цементной стяжки
+                                        div.price__text от 945 руб./м²
+                    button.price__btn Скачать прайс-лист
+        section.faq
+            div.container
+                div.faq__block
+                    h2.faq__heading Ответы на вопросы
+                    ul.faq__list(id="accordionNew")
+                        li.faq__item
+                            h3.faq__accordion-heading Схема нашей работы #[img(src="img/green-arrow.svg", alt="")]
+                            div.faq__text Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.
+                        li.faq__item 
+                            h3.faq__accordion-heading Схема нашей работы #[img(src="img/green-arrow.svg", alt="")]
+                            div.faq__text Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.
+                        li.faq__item 
+                            h3.faq__accordion-heading Схема нашей работы #[img(src="img/green-arrow.svg", alt="")]
+                            div.faq__text Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.
+                        li.faq__item 
+                            h3.faq__accordion-heading Схема нашей работы #[img(src="img/green-arrow.svg", alt="")]
+                            div.faq__text Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.
+                        li.faq__item 
+                            h3.faq__accordion-heading Схема нашей работы #[img(src="img/green-arrow.svg", alt="")]
+                            div.faq__text Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.
+                    div.faq__flex
+                        button.faq__btn.faq__btn-img 
+                            svg(width="12", height="22", viewBox="0 0 12 22", fill="none", xmlns="http://www.w3.org/2000/svg") 
+                                path(d="M11 21L1 11L11 1", stroke="#535353", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+                        button.faq__btn.faq__btn-active 1
+                        button.faq__btn 2
+                        button.faq__btn.faq__btn-img
+                            svg(width="12", height="22", viewBox="0 0 12 22", fill="none", xmlns="http://www.w3.org/2000/svg") 
+                                path(d="M1 1L11 11L1 21", stroke="#535353", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+        section.contacts
+            div.container
+                div.contants__block
+                    div.contacts__item 
+                    div.contacts__item 
+                        div(id="mapNew" style="width:800px; height:680px")

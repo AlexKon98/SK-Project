@@ -64,4 +64,67 @@ document.addEventListener('DOMContentLoaded', () => {
             myMap.geoObjects.add(myPlacemark);
         });
     }
+
+    let infoBtn = document.querySelectorAll('.info__btn');
+    let popup = document.getElementById('popup')
+    let popupBtn = document.getElementById('popup__btn');
+
+    infoBtn.forEach((info) => {
+        info.addEventListener('click', () => {
+            popup.style.display = 'flex';
+        })
+    })
+
+    popupBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+    })
+
+    const swiperNew = new Swiper('.popup__slider-block', {
+        direction: 'vertical',
+        loop: false,
+        slidesPerView: 2,
+        spaceBetween: 21,
+        slidesPerGroup: 1,
+        navigation: {
+            nextEl: '.slider-button-next',
+            prevEl: '.slider-button-prev',
+        },
+    });
+
+    let newSlides = document.querySelectorAll('.popup__slider-image');
+    let slideImage = document.querySelector('.popup__slider-img')
+
+    newSlides.forEach((slide) => {
+        slide.addEventListener('click', () => {
+            newSlides.forEach((img) => {
+                img.classList.remove('popup__active')
+            })
+            slide.classList.add('popup__active')
+            slideImage.src = slide.src
+        })
+    })
+
+    $(function() {
+        $("#accordion").accordion({
+            collapsible: true,
+        });
+    });
+    $(function() {
+        $("#accordionNew").accordion({
+            collapsible: true,
+        });
+    });
+
+    function init() {
+        var newMap = new ymaps.Map("mapNew", {
+            center: [55.7416830588682, 37.61600262770661],
+            zoom: 18
+        });
+        var newPlacemark = new ymaps.Placemark([55.7416830588682, 37.61600262770661], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/mappin.svg',
+            iconImageSize: [36, 36],
+        });
+        newMap.geoObjects.add(newPlacemark);
+    }
 })

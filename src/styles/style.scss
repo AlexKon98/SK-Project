@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+body {
+    position: relative;
+}
+
 img {
     object-fit: cover;
 }
@@ -261,6 +265,20 @@ ul {
     margin-bottom: 100px;
 }
 
+// .ui-accordion .ui-accordion-header {
+//     display: flex;
+//     margin: 0;
+//     padding: 0;
+//     background-color: #fff;
+//     border: none;
+// }
+// .ui-widget-content {
+//     border: none;
+// }
+// .ui-state-active {
+//     background-color: #fff;
+//     border: none;
+// }
 .services {
     margin-bottom: 100px;
     &__heading {
@@ -289,6 +307,7 @@ ul {
     }
     &__flex {
         display: flex;
+        cursor: pointer;
         &__column {
             display: flex;
             flex-direction: column;
@@ -652,6 +671,21 @@ ul {
 
 .calculator {
     padding: 100px 0;
+    &__block-m {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: 'м²';
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+            top: 3px;
+            right: 35px;
+        }
+    }
     &__heading {
         font-family: 'Montserrat', sans-serif;
         font-style: normal;
@@ -1103,4 +1137,302 @@ ul {
         padding: 21px 60px;
         margin-bottom: 1px;
     }
+}
+
+.price {
+    margin-bottom: 100px;
+    &__heading {
+        margin-bottom: 70px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 49px;
+        color: #021705;
+    }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__list,
+    &__services {
+        display: flex;
+        flex-direction: column;
+    }
+    &__btn {
+        display: block;
+        @include button;
+        padding: 20px 40px;
+        color: #fff;
+        margin: 0 auto;
+    }
+    &__heading-low {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 16px;
+        color: #021705;
+    }
+    &__list-item {
+        display: flex;
+        justify-content: space-between;
+        width: calc(420px + 24px + 116px);
+        margin-bottom: 10px;
+    }
+    &__content {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 420px;
+        color: rgba(2, 23, 5, 0.7);
+    }
+    &__text {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(2, 23, 5, 0.7);
+    }
+}
+
+#first {
+    margin-bottom: 40px;
+}
+
+#third {
+    margin-bottom: 110px;
+}
+
+.popup {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    background-color: rgba($color: #000000, $alpha: .8);
+    &__form {
+        position: relative;
+        padding: 54px 44px 30px;
+        background-color: #fff;
+    }
+    &__btn {
+        position: absolute;
+        border: none;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 20px;
+        right: 22px;
+    }
+    &__heading {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+        text-align: center;
+        color: #021705;
+        margin-bottom: 34px;
+        &-low {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 16px;
+            color: #021705;
+        }
+    }
+    &__list {
+        display: flex;
+        margin-bottom: 36px;
+        &-low {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-left: 18px;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &-low {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #041306;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+    }
+    &__img {
+        padding-left: 1px;
+        padding-right: 10px;
+    }
+    &__slide {
+        width: 200px !important;
+        max-width: 200px;
+        max-height: 150px;
+        height: 150px;
+    }
+    &__slider {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        width: calc(570px + 42px + 210px);
+        &-img {
+            width: 570px;
+            max-width: 570px;
+            height: 330px;
+            max-height: 330px;
+        }
+        &-block {
+            padding-top: 5px;
+            width: 210px;
+            height: 330px;
+        }
+        &-image {
+            width: 200px !important;
+            max-width: 200px;
+            max-height: 150px;
+            height: 150px;
+        }
+    }
+    &__lists {
+        display: flex;
+        flex-direction: column;
+        list-style-type: square;
+    }
+    &__wrapper {
+        align-items: center
+    }
+    &__active {
+        outline: 5px solid #041306;
+    }
+}
+
+.slider-button-next,
+.slider-button-prev {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: rgba(17, 17, 17, 0.8);
+    z-index: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-button-next {
+    bottom: 0;
+    &::after {
+        content: url(img/next-white-vertical.svg);
+    }
+}
+
+.slider-button-prev {
+    top: 0;
+    &::after {
+        content: url(img/next-white-vertical.svg);
+        transform: rotate(180deg);
+    }
+}
+
+.ui-icon {
+    display: none;
+}
+
+.faq {
+    margin-bottom: 100px;
+    &__heading {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 49px;
+        margin-bottom: 70px;
+        color: #021705;
+    }
+    &__list {
+        margin-bottom: 50px;
+    }
+    &__item {
+        padding: 34px 32px 36px 36px;
+        box-shadow: 0px 4px 15px -2px rgba(122, 122, 122, 0.15);
+        border-radius: 4px;
+        margin-bottom: 16px;
+    }
+    &__accordion-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    &__flex {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text {
+        padding-top: 16px;
+        padding-right: 141px;
+        height: max-content;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(2, 23, 5, 0.7);
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+        color: #535353;
+        padding: 11px 16px;
+        background: rgba(33, 166, 54, 0.2);
+        border: none;
+        margin-right: 8px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &-img {
+            padding: 14px 16px 15px;
+        }
+        &-active {
+            background-color: #21A636;
+            color: #FFF;
+        }
+    }
+}
+
+.faq__accordion-heading img {
+    transition: transform .4s ease-in-out;
+}
+
+.ui-accordion-header-active img {
+    transform: rotate(-180deg);
 }
