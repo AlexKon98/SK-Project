@@ -1,22 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     let range = document.getElementById('range');
     let output = document.getElementById('change');
     let calcValue = document.getElementById('calcValue');
+
     output.textContent = range.value;
+
     range.oninput = function() {
         output.textContent = this.value;
         calcValue.value = this.value;
     }
+
     output.textContent.onchange = function() {
         range.value = this.textContent
     }
+
     calcValue.addEventListener('input', function() {
         output.textContent = calcValue.value;
         range.value = calcValue.value;
     })
-})
 
-document.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('.swiper', {
         direction: 'vertical',
         loop: false,
@@ -48,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [46.872185073737896, 4.354223999999991],
         [55.75399399999374, 37.62209300000001]
     ];
+
     ymaps.ready(init);
 
     function init() {
@@ -63,6 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             myMap.geoObjects.add(myPlacemark);
         });
+        var newMap = new ymaps.Map("mapNew", {
+            center: [55.7416830588682, 37.61600262770661],
+            zoom: 19
+        });
+
+        var newPlacemark = new ymaps.Placemark([55.7416830588682, 37.61600262770661], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/mappin-main.svg',
+            iconImageSize: [36, 36],
+        });
+        newMap.geoObjects.add(newPlacemark);
     }
 
     let infoBtn = document.querySelectorAll('.info__btn');
@@ -115,16 +130,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    function init() {
-        var newMap = new ymaps.Map("mapNew", {
-            center: [55.7416830588682, 37.61600262770661],
-            zoom: 18
-        });
-        var newPlacemark = new ymaps.Placemark([55.7416830588682, 37.61600262770661], {}, {
-            iconLayout: 'default#image',
-            iconImageHref: 'img/mappin.svg',
-            iconImageSize: [36, 36],
-        });
-        newMap.geoObjects.add(newPlacemark);
-    }
+    let faqBtn = document.querySelectorAll('.faq__btn');
+    faqBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            faqBtn.forEach((button) => {
+                button.classList.remove('faq__btn-active')
+            })
+            btn.classList.add('faq__btn-active')
+        })
+    })
 })
