@@ -5,7 +5,6 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="normalize.css")
-        //- link(rel="stylesheet", href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css")
         link(rel="stylesheet", href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
         link(rel="stylesheet", href="main.css")
         script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
@@ -15,10 +14,34 @@ html(lang="en")
         script(src="https://code.jquery.com/ui/1.13.0/jquery-ui.js")
         title СК Проект
     body
+    div.menu(id="menu")
+        div.menu__block
+            div.menu__flex
+                a.menu__img(href="#")
+                    img.menu__logo(src="img/logo-footer.svg", alt="")
+                button.menu__btn(id="menu__btn")
+                    img(src="img/close-black.svg", alt="")
+            ul.menu__list
+                li.menu__item 
+                    a.menu__link(href="") Услуги
+                li.menu__item 
+                    a.menu__link(href="") Наши работы
+                li.menu__item 
+                    a.menu__link(href="") Калькулятор
+                li.menu__item 
+                    a.menu__link(href="") Контакты
+            div.menu__contacts 
+                div.menu__phone
+                    img(src="img/phone-green.svg", alt="")
+                    a(href="tel:88003331140") 8 800 333-11-40
+                div.menu__mail
+                    img(src="img/mail-green.svg", alt="")
+                    a(href="mailto:info@intecocert.ru") info@intecocert.ru
+                button.menu__button Заказать звонок
     div.popup(id="popup")
         div.popup__form(id="popup__form")
             button.popup__btn(id="popup__btn")
-                svg(width="40", height="40", viewBox="0 0 40 40", fill="none", xmlns="http://www.w3.org/2000/svg")
+                svg(width="40", height="40", viewbox="0 0 40 40", fill="none", xmlns="http://www.w3.org/2000/svg")
                     path(d="M31.25 8.75L8.75 31.25", stroke="#021705", stroke-opacity="0.7",stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
                     path(d="M31.25 31.25L8.75 8.75", stroke="#021705", stroke-opacity="0.7", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
             h2.popup__heading Капитальный ремонт квартиры
@@ -90,6 +113,8 @@ html(lang="en")
                                 img.mail__img(src="img/mail-green.svg", alt="")
                                 a.contacts__mail(href="mailto:info@intecocert.ru") info@intecocert.ru
                         button.contacts__btn Заказать звонок
+                    button.header__button
+                        img(src="img/menu.svg", alt="")
         div.container(id="cont")
             div.finishing
                 div.finishing__content
@@ -305,6 +330,156 @@ html(lang="en")
                                     div.services__date Срок:
                                     div.services__days от 5 дней
                                 button.services__btn.btn Заказать
+                    ul.services__list-mobile
+                        li.services__item-mobile 
+                            h3.services__heading-mobile Косметический ремонт
+                            ul.services__accordion-mobile.accordion-mobile
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Демонтаж ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Демонтаж старых покрытий
+                                        p.services__item_low Демонтаж старой электрики
+                                        p.services__item_low Демонтаж дверей
+                                li.services__accordion-item
+                                    h3.services__accordion-heading #[span Черновые работы ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Грунтовка стен и пола
+                                        p.services__item_low Шпатлевка и штукатурка стен
+                                        p.services__item_low Устройство наливных полов
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Чистовые работы ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Настил линолеума, ковролина
+                                        p.services__item_low Монтаж плинтусов
+                                        p.services__item_low Оклейка стен обоями
+                                        p.services__item_low Устройство откосов из ПВХ-панелей, сендвич-панелей
+                                        p.services__item_low Настил линолеума, ковролина
+                                        p.services__item_low Установка подоконников, отливов
+                                        p.services__item_low Установка межкомнатных дверей
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Электрика ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Монтаж электроточки
+                                        p.services__item_low Прокладка кабеля
+                                        p.services__item_low Штробление стен под электрокабель
+                            div.services__flex-mobile
+                                div.services__price-mobile Цена: #[span.services__old-price 5200 руб/м #[sup 2]]
+                                div.services__price-mobile-new 5200 руб/м2
+                            div.services__flex-mobile
+                                div.services__days-mobile Срок: #[span.services__day от 5 дней]
+                            button.services__btn-mobile Заказать
+                        li.services__item-mobile 
+                            h3.services__heading-mobile Косметический ремонт
+                            ul.services__accordion-mobile.accordion-mobile
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Демонтаж ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Демонтаж старых покрытий
+                                        p.services__item_low Демонтаж старой электрики
+                                        p.services__item_low Демонтаж дверей
+                                li.services__accordion-item
+                                    h3.services__accordion-heading #[span Черновые работы ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Грунтовка стен и пола
+                                        p.services__item_low Шпатлевка и штукатурка стен
+                                        p.services__item_low Устройство наливных полов
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Чистовые работы ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Настил линолеума, ковролина
+                                        p.services__item_low Монтаж плинтусов
+                                        p.services__item_low Оклейка стен обоями
+                                        p.services__item_low Устройство откосов из ПВХ-панелей, сендвич-панелей
+                                        p.services__item_low Настил линолеума, ковролина
+                                        p.services__item_low Установка подоконников, отливов
+                                        p.services__item_low Установка межкомнатных дверей
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Электрика ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Монтаж электроточки
+                                        p.services__item_low Прокладка кабеля
+                                        p.services__item_low Штробление стен под электрокабель
+                            div.services__flex-mobile
+                                div.services__price-mobile Цена: #[span.services__old-price 5200 руб/м #[sup 2]]
+                                div.services__price-mobile-new 5200 руб/м2
+                            div.services__flex-mobile
+                                div.services__days-mobile Срок: #[span.services__day от 5 дней]
+                            button.services__btn-mobile Заказать
+                        li.services__item-mobile 
+                            h3.services__heading-mobile Косметический ремонт
+                            ul.services__accordion-mobile.accordion-mobile
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Демонтаж ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Демонтаж старых покрытий
+                                        p.services__item_low Демонтаж старой электрики
+                                        p.services__item_low Демонтаж дверей
+                                li.services__accordion-item
+                                    h3.services__accordion-heading #[span Черновые работы ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Грунтовка стен и пола
+                                        p.services__item_low Шпатлевка и штукатурка стен
+                                        p.services__item_low Устройство наливных полов
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Чистовые работы ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Настил линолеума, ковролина
+                                        p.services__item_low Монтаж плинтусов
+                                        p.services__item_low Оклейка стен обоями
+                                        p.services__item_low Устройство откосов из ПВХ-панелей, сендвич-панелей
+                                        p.services__item_low Настил линолеума, ковролина
+                                        p.services__item_low Установка подоконников, отливов
+                                        p.services__item_low Установка межкомнатных дверей
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Электрика ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Монтаж электроточки
+                                        p.services__item_low Прокладка кабеля
+                                        p.services__item_low Штробление стен под электрокабель
+                            div.services__flex-mobile
+                                div.services__price-mobile Цена: #[span.services__old-price 5200 руб/м #[sup 2]]
+                                div.services__price-mobile-new 5200 руб/м2
+                            div.services__flex-mobile
+                                div.services__days-mobile Срок: #[span.services__day от 5 дней]
+                            button.services__btn-mobile Заказать
+                        li.services__item-mobile 
+                            h3.services__heading-mobile Косметический ремонт
+                            ul.services__accordion-mobile.accordion-mobile
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Демонтаж ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Демонтаж старых покрытий
+                                        p.services__item_low Демонтаж старой электрики
+                                        p.services__item_low Демонтаж дверей
+                                li.services__accordion-item
+                                    h3.services__accordion-heading #[span Черновые работы ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Грунтовка стен и пола
+                                        p.services__item_low Шпатлевка и штукатурка стен
+                                        p.services__item_low Устройство наливных полов
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Чистовые работы ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Настил линолеума, ковролина
+                                        p.services__item_low Монтаж плинтусов
+                                        p.services__item_low Оклейка стен обоями
+                                        p.services__item_low Устройство откосов из ПВХ-панелей, сендвич-панелей
+                                        p.services__item_low Настил линолеума, ковролина
+                                        p.services__item_low Установка подоконников, отливов
+                                        p.services__item_low Установка межкомнатных дверей
+                                li.services__accordion-item 
+                                    h3.services__accordion-heading #[span Электрика ] #[img(src="img/arrow-down-green.svg", alt="")]
+                                    div.services__list-mobile
+                                        p.services__item_low Монтаж электроточки
+                                        p.services__item_low Прокладка кабеля
+                                        p.services__item_low Штробление стен под электрокабель
+                            div.services__flex-mobile
+                                div.services__price-mobile Цена: #[span.services__old-price 5200 руб/м #[sup 2]]
+                                div.services__price-mobile-new 5200 руб/м2
+                            div.services__flex-mobile
+                                div.services__days-mobile Срок: #[span.services__day от 5 дней]
+                            button.services__btn-mobile Заказать
+                        
         section.why 
             div.container 
                 div.why__container
@@ -334,7 +509,7 @@ html(lang="en")
             div.container
                 h2.objects__heading Объекты, которые мы уже выполнили
                 ul.objects__flex
-                    li.objects__item
+                    li.objects__item.objects__one
                         div.item__heading Капитальный ремонт квартиры
                         img.item__img(src="img/test-img.png", alt="")
                         div.item__info
@@ -351,7 +526,7 @@ html(lang="en")
                                 img.info__img(src="img/square.svg", alt="")
                                 p.info__text Площадь 64 м#[span ²]
                         button.btn.info__btn Заказать
-                    li.objects__item
+                    li.objects__item.objects__one
                         div.item__heading Капитальный ремонт квартиры
                         img.item__img(src="img/test-img.png", alt="")
                         div.item__info
@@ -368,7 +543,7 @@ html(lang="en")
                                 img.info__img(src="img/square.svg", alt="")
                                 p.info__text Площадь 64 м#[span ²]
                         button.btn.info__btn Заказать
-                    li.objects__item
+                    li.objects__item.objects__two
                         div.item__heading Капитальный ремонт квартиры
                         img.item__img(src="img/test-img.png", alt="")
                         div.item__info
@@ -385,7 +560,7 @@ html(lang="en")
                                 img.info__img(src="img/square.svg", alt="")
                                 p.info__text Площадь 64 м#[span ²]
                         button.btn.info__btn Заказать
-                    li.objects__item
+                    li.objects__item.objects__two
                         div.item__heading Капитальный ремонт квартиры
                         img.item__img(src="img/test-img.png", alt="")
                         div.item__info
@@ -402,7 +577,7 @@ html(lang="en")
                                 img.info__img(src="img/square.svg", alt="")
                                 p.info__text Площадь 64 м#[span ²]
                         button.btn.info__btn Заказать
-                    li.objects__item
+                    li.objects__item.objects__three
                         div.item__heading Капитальный ремонт квартиры
                         img.item__img(src="img/test-img.png", alt="")
                         div.item__info
@@ -419,7 +594,7 @@ html(lang="en")
                                 img.info__img(src="img/square.svg", alt="")
                                 p.info__text Площадь 64 м#[span ²]
                         button.btn.info__btn Заказать
-                    li.objects__item
+                    li.objects__item.objects__three
                         div.item__heading Капитальный ремонт квартиры
                         img.item__img(src="img/test-img.png", alt="")
                         div.item__info
@@ -436,8 +611,18 @@ html(lang="en")
                                 img.info__img(src="img/square.svg", alt="")
                                 p.info__text Площадь 64 м#[span ²]
                         button.btn.info__btn Заказать
+                div.objects__nav-flex
+                    button.objects__btn.objects__btn-img 
+                        svg(width="12", height="22", viewbox="0 0 12 22", fill="none", xmlns="http://www.w3.org/2000/svg") 
+                            path(d="M11 21L1 11L11 1", stroke="#535353", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+                        button.objects__btn.objects__btn-active 1
+                        button.objects__btn 2
+                        button.objects__btn.objects__btn-img
+                            svg(width="12", height="22", viewbox="0 0 12 22", fill="none", xmlns="http://www.w3.org/2000/svg") 
+                                path(d="M1 1L11 11L1 21", stroke="#535353", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
         section.license
             div.container
+                h2.license__heading.license__heading-mobile Гарантируем честность сделки
                 div.license__wrapper
                     img.license__img(src="img/license.png", alt="")
                     div.license__flex
@@ -688,15 +873,14 @@ html(lang="en")
                             div.faq__text Выезд инженера – сметчика (БЕСПЛАТНО), составление и согласование сметы на проводимые работы, Заключаем ДОГОВОР НА РЕМОНТ в котором указывается цена, сроки начала и окончания работ, ГАРАНТИЯ НА ВЫПОЛНЕННЫЕ РАБОТЫ к слову она составляет 3 года! Оплата за выполненные работы по этапная, на основании актов сданных заказчику работ. Закрепление за объектом постоянного прораба + авторский надзор ( все работы выполняются исключительно согласно СНиП, ГоСТ, СП). Периодически в компании проводятся разные АКЦИИ, предусмотрены СКИДКИ и ПОДАРКИ нашим клиентам.
                     div.faq__flex
                         button.faq__btn.faq__btn-img 
-                            svg(width="12", height="22", viewBox="0 0 12 22", fill="none", xmlns="http://www.w3.org/2000/svg") 
+                            svg(width="12", height="22", viewbox="0 0 12 22", fill="none", xmlns="http://www.w3.org/2000/svg") 
                                 path(d="M11 21L1 11L11 1", stroke="#535353", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
                         button.faq__btn.faq__btn-active 1
                         button.faq__btn 2
                         button.faq__btn.faq__btn-img
-                            svg(width="12", height="22", viewBox="0 0 12 22", fill="none", xmlns="http://www.w3.org/2000/svg") 
+                            svg(width="12", height="22", viewbox="0 0 12 22", fill="none", xmlns="http://www.w3.org/2000/svg") 
                                 path(d="M1 1L11 11L1 21", stroke="#535353", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
         section.contact
-            div.contact__map(id="mapNew")
             div.container
                 div.contact__block
                     h2.contact__heading Контакты
@@ -721,13 +905,14 @@ html(lang="en")
                             div.contact__text #[a(href="tel:+74958560011") +7(495)856-00-11]
                     div.contact__questions Остальись вопросы?
                     button.contact__btn Обратный звонок
+            div.contact__map(id="mapNew")
     footer.footer 
         div.container
             div.footer__contacts
-                a(href="#") #[img(src="img/logo-footer.svg", alt="")]  
+                a.footer__link(href="#") #[img(src="img/logo-footer.svg", alt="")]  
                 div.footer__flex
                     div.footer__wrapper 
-                        img.footer__img(src="img/phone-footer.svg", alt="")
+                        img.footer__img.footer__phone-img(src="img/phone-footer.svg", alt="")
                         a.footer__phone(href="tel:tel:+74958560011") +7(495)856-00-11
                     div.footer__wrapper 
                         img.footer__img(src="img/mail-footer.svg", alt="")

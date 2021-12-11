@@ -21,15 +21,28 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const swiper = new Swiper('.swiper', {
-        direction: 'vertical',
+        direction: 'horizontal',
         loop: false,
         slidesPerView: 3,
-        spaceBetween: 9,
+        spaceBetween: 20,
         slidesPerGroup: 1,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            1199: {
+                direction: 'vertical',
+                loop: false,
+                slidesPerView: 3,
+                spaceBetween: 9,
+                slidesPerGroup: 1,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            }
+        }
     });
 
     let slides = document.querySelectorAll('.slider__image');
@@ -121,12 +134,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $(function() {
         $("#accordion").accordion({
+            heightStyle: 'content',
             collapsible: true,
+            active: false,
         });
     });
+
     $(function() {
         $("#accordionNew").accordion({
+            heightStyle: 'content',
             collapsible: true,
+            active: false,
         });
     });
 
@@ -137,6 +155,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 button.classList.remove('faq__btn-active')
             })
             btn.classList.add('faq__btn-active')
+        })
+    })
+
+    let menuButton = document.getElementById('menu__btn');
+    menuButton.addEventListener('click', () => {
+        document.getElementById('menu').style.display = 'none';
+    })
+
+    let headerBtn = document.querySelector('.header__button');
+
+    headerBtn.addEventListener('click', () => {
+        document.getElementById('menu').style.display = 'block';
+    })
+
+    $(function() {
+        $(".accordion-mobile").accordion({
+            heightStyle: 'content',
+            collapsible: true,
+            active: false,
+        });
+    });
+
+    let objBtns = document.querySelectorAll('.objects__btn');
+    objBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            objBtns.forEach((button) => {
+                button.classList.remove('objects__btn-active')
+            })
+            btn.classList.add('objects__btn-active')
         })
     })
 })
