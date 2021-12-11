@@ -108,15 +108,28 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     const swiperNew = new Swiper('.popup__slider-block', {
-        direction: 'vertical',
+        direction: 'horizontal',
         loop: false,
-        slidesPerView: 2,
-        spaceBetween: 21,
+        slidesPerView: 3,
+        spaceBetween: 6,
         slidesPerGroup: 1,
         navigation: {
             nextEl: '.slider-button-next',
             prevEl: '.slider-button-prev',
         },
+        breakpoints: {
+            999: {
+                direction: 'vertical',
+                loop: false,
+                slidesPerView: 2,
+                spaceBetween: 21,
+                slidesPerGroup: 1,
+                navigation: {
+                    nextEl: '.slider-button-next',
+                    prevEl: '.slider-button-prev',
+                },
+            }
+        }
     });
 
     let newSlides = document.querySelectorAll('.popup__slider-image');
