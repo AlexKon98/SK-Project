@@ -199,4 +199,32 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('objects__btn-active')
         })
     })
+
+    let plan = document.getElementById('plan');
+    let standart = document.getElementById('standart');
+    let max = document.getElementById('max');
+
+    plan.addEventListener('input', () => {
+        if (plan.checked) {
+            document.getElementById('first-example').style.display = 'block';
+            document.getElementById('second-example').style.display = 'none';
+            document.getElementById('third-example').style.display = 'none';
+        }
+    })
+
+    standart.addEventListener('input', () => {
+        if (standart.checked) {
+            document.getElementById('first-example').style.display = 'none';
+            document.getElementById('second-example').style.display = 'block';
+            document.getElementById('third-example').style.display = 'none';
+        }
+    })
+
+    max.addEventListener('input', () => {
+        if (max.checked) {
+            document.getElementById('first-example').style.display = 'none';
+            document.getElementById('second-example').style.display = 'none';
+            document.getElementById('third-example').style.display = 'block';
+        }
+    })
 })

@@ -1723,6 +1723,11 @@ ul {
     display: none;
 }
 
+#second-example,
+#third-example {
+    display: none;
+}
+
 @media (max-width: 1919px) {
     .contact__map {
         width: 600px;
