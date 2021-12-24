@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     plan.addEventListener('input', () => {
         if (plan.checked) {
-            document.getElementById('first-example').style.display = 'block';
+            document.getElementById('first-example').style.display = 'flex';
             document.getElementById('second-example').style.display = 'none';
             document.getElementById('third-example').style.display = 'none';
         }
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     standart.addEventListener('input', () => {
         if (standart.checked) {
             document.getElementById('first-example').style.display = 'none';
-            document.getElementById('second-example').style.display = 'block';
+            document.getElementById('second-example').style.display = 'flex';
             document.getElementById('third-example').style.display = 'none';
         }
     })
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (max.checked) {
             document.getElementById('first-example').style.display = 'none';
             document.getElementById('second-example').style.display = 'none';
-            document.getElementById('third-example').style.display = 'block';
+            document.getElementById('third-example').style.display = 'flex';
         }
     })
 })
